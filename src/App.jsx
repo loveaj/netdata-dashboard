@@ -7,7 +7,7 @@ import {
 
 import './css/style.css';
 
-import './charts/ChartjsConfig';
+import './charts/ChartConfig';
 
 // Import pages
 import Dashboard from './pages/Dashboard';
