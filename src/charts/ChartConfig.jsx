@@ -3,7 +3,7 @@ import { Chart, Tooltip } from 'chart.js';
 // Import Tailwind config
 import { tailwindConfig } from '../utils/Utils';
 
-//NETDATA.
+
 
 Chart.register(Tooltip);
 
