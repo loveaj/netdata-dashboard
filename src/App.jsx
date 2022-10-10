@@ -7,14 +7,40 @@ import {
 
 import './css/style.css';
 
-import './charts/ChartConfig';
-
 // Import pages
 import Dashboard from './pages/Dashboard';
+import ServersLinux from './pages/ServersLinux';
 
 function App() {
 
   const location = useLocation();
+
+  // Pause Netdata just before page refresh
+  useEffect(() => {
+    const onPageUnload = () => {
+      NETDATA.pause();
+    }
+ 
+    window.addEventListener('beforeunload', onPageUnload);
+    return () => {
+      window.removeEventListener('beforeunload', onPageUnload);
+    }
+  }, []);
+
+  // Start Netdata once the DOM has completely loaded after refresh
+  useEffect(() => {
+    const onPageLoad = () => {
+      NETDATA.start();
+    }
+
+    window.addEventListener("load", onPageLoad);
+    // Remove the event listener when component unmounts
+    window.addEventListener('load', onPageLoad);
+    return () => {
+      window.removeEventListener('load', onPageLoad);
+    }
+  }, []);
+
 
   useEffect(() => {
     document.querySelector('html').style.scrollBehavior = 'auto'
@@ -26,9 +52,12 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/infrastructure/ibmi" element={<Dashboard />} />
+        <Route exact path="/infrastructure/serverslinux" element={<ServersLinux />} />
       </Routes>
     </>
   );
+
 }
 
 export default App;

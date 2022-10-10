@@ -1,66 +1,182 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  content: [
-    './index.html',
-    './src/**/*.{js,jsx,ts,tsx}',
-  ],
-  theme: {
-    extend: {
-      boxShadow: {
-        DEFAULT: '0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.02)',
-        md: '0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.02)',
-        lg: '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.01)',
-        xl: '0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.01)',
-      },
-      outline: {
-        blue: '2px solid rgba(0, 112, 244, 0.5)',
-      },
-      fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-      },
-      fontSize: {
-        xs: ['0.75rem', { lineHeight: '1.5' }],
-        sm: ['0.875rem', { lineHeight: '1.5715' }],
-        base: ['1rem', { lineHeight: '1.5', letterSpacing: '-0.01em' }],
-        lg: ['1.125rem', { lineHeight: '1.5', letterSpacing: '-0.01em' }],
-        xl: ['1.25rem', { lineHeight: '1.5', letterSpacing: '-0.01em' }],
-        '2xl': ['1.5rem', { lineHeight: '1.33', letterSpacing: '-0.01em' }],
-        '3xl': ['1.88rem', { lineHeight: '1.33', letterSpacing: '-0.01em' }],
-        '4xl': ['2.25rem', { lineHeight: '1.25', letterSpacing: '-0.02em' }],
-        '5xl': ['3rem', { lineHeight: '1.25', letterSpacing: '-0.02em' }],
-        '6xl': ['3.75rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
-      },
-      screens: {
-        xs: '480px',
-      },
-      borderWidth: {
-        3: '3px',
-      },
-      minWidth: {
-        36: '9rem',
-        44: '11rem',
-        56: '14rem',
-        60: '15rem',
-        72: '18rem',
-        80: '20rem',
-      },
-      maxWidth: {
-        '8xl': '88rem',
-        '9xl': '96rem',
-      },
-      zIndex: {
-        60: '60',
-      },
-    },
-  },
-  plugins: [
-    // eslint-disable-next-line global-require
-    require('@tailwindcss/forms'),
-    // add custom variant for expanding sidebar
-    plugin(({ addVariant, e }) => {
-      addVariant('sidebar-expanded', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => `.sidebar-expanded .${e(`sidebar-expanded${separator}${className}`)}`);
+        content: [
+            './index.html',
+            './src/**/*.{js,jsx,ts,tsx}',
+        ],
+        theme: {
+            extend: {
+                boxShadow: {
+                    DEFAULT: '0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.02)',
+                    md: '0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.02)',
+                    lg: '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.01)',
+                    xl: '0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.01)',
+                },
+                outline: {
+                    blue: '2px solid rgba(0, 112, 244, 0.5)',
+                },
+                fontFamily: {
+                    inter: ['Source Sans Pro', 'Inter', 'sans-serif'],
+                },
+                fontSize: {
+                    xs: ['0.75rem', { lineHeight: '1.5' }],
+                    sm: ['0.875rem', { lineHeight: '1.5715' }],
+                    base: ['1rem', { lineHeight: '1.5', letterSpacing: '-0.01em' }],
+                    lg: ['1.125rem', { lineHeight: '1.5', letterSpacing: '-0.01em' }],
+                    xl: ['1.25rem', { lineHeight: '1.5', letterSpacing: '-0.01em' }],
+                    '2xl': ['1.5rem', { lineHeight: '1.33', letterSpacing: '-0.01em' }],
+                    '3xl': ['1.88rem', { lineHeight: '1.33', letterSpacing: '-0.01em' }],
+                    '4xl': ['2.25rem', { lineHeight: '1.25', letterSpacing: '-0.02em' }],
+                    '5xl': ['3rem', { lineHeight: '1.25', letterSpacing: '-0.02em' }],
+                    '6xl': ['3.75rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
+                },
+                screens: {
+                    xs: '480px',
+                },
+                borderWidth: {
+                    3: '3px',
+                },
+                minWidth: {
+                    36: '9rem',
+                    44: '11rem',
+                    56: '14rem',
+                    60: '15rem',
+                    72: '18rem',
+                    80: '20rem',
+                },
+                maxWidth: {
+                    '8xl': '88rem',
+                    '9xl': '96rem',
+                },
+                zIndex: {
+                    60: '60',
+                },
+                colors: {
+                    transparent: 'transparent',
+                    black: '#000',
+                    white: '#fff',
+                    gray: {
+                        100: '#d7d7d9',
+                        200: '#eaeced',
+                        300: '#afafb3',
+                        400: '#dde0e1',
+                        500: '#87878d',
+                        600: '#718096',
+                        700: '#5f5f67',
+                        800: '#373741',
+                        900: '#303031',
+                    },
+                    red: {
+                        100: '#f7ccd6',
+                        200: '#d595a4',
+                        300: '#ee99ad',
+                        400: '#d56b84',
+                        500: '#e66684',
+                        600: '#d54063',
+                        700: '#de335b',
+                        800: '#d51542',
+                        900: '#d50032',
+                    },
+                    orange: {
+                        100: '#fffaf0',
+                        200: '#feebc8',
+                        300: '#fbd38d',
+                        400: '#f6ad55',
+                        500: '#ed8936',
+                        600: '#dd6b20',
+                        700: '#c05621',
+                        800: '#9c4221',
+                        900: '#7b341e',
+                    },
+                    yellow: {
+                        100: '#fffff0',
+                        200: '#fefcbf',
+                        300: '#faf089',
+                        400: '#f6e05e',
+                        500: '#ecc94b',
+                        600: '#d69e2e',
+                        700: '#b7791f',
+                        800: '#975a16',
+                        900: '#fdb913',
+                    },
+                    green: {
+                        100: '#f0fff4',
+                        200: '#c6f6d5',
+                        300: '#9ae6b4',
+                        400: '#68d391',
+                        500: '#48bb78',
+                        600: '#38a169',
+                        700: '#2f855a',
+                        800: '#276749',
+                        900: '#22543d',
+                    },
+                    teal: {
+                        100: '#e6fffa',
+                        200: '#b2f5ea',
+                        300: '#81e6d9',
+                        400: '#4fd1c5',
+                        500: '#38b2ac',
+                        600: '#319795',
+                        700: '#2c7a7b',
+                        800: '#285e61',
+                        900: '#234e52',
+                    },
+                    blue: {
+                        100: '#ebf8ff',
+                        200: '#bee3f8',
+                        300: '#90cdf4',
+                        400: '#63b3ed',
+                        500: '#4299e1',
+                        600: '#3182ce',
+                        700: '#2b6cb0',
+                        800: '#2c5282',
+                        900: '#2a4365',
+                    },
+                    indigo: {
+                        100: '#ebf4ff',
+                        200: '#c3dafe',
+                        300: '#a3bffa',
+                        400: '#7f9cf5',
+                        500: '#667eea',
+                        600: '#5a67d8',
+                        700: '#4c51bf',
+                        800: '#434190',
+                        900: '#3c366b',
+                    },
+                    purple: {
+                        100: '#faf5ff',
+                        200: '#e9d8fd',
+                        300: '#d6bcfa',
+                        400: '#b794f4',
+                        500: '#9f7aea',
+                        600: '#805ad5',
+                        700: '#6b46c1',
+                        800: '#553c9a',
+                        900: '#44337a',
+                    },
+                    pink: {
+                        100: '#fff5f7',
+                        200: '#fed7e2',
+                        300: '#fbb6ce',
+                        400: '#f687b3',
+                        500: '#ed64a6',
+                        600: '#d53f8c',
+                        700: '#b83280',
+                        800: '#97266d',
+                        900: '#702459',
+                    },
+                },
+
+            },
+        },
+        plugins: [
+                // eslint-disable-next-line global-require
+                require('@tailwindcss/forms'),
+                // add custom variant for expanding sidebar
+                plugin(({ addVariant, e }) => {
+                        addVariant('sidebar-expanded', ({ modifySelectors, separator }) => {
+                                    modifySelectors(({ className }) => `.sidebar-expanded .${e(`sidebar-expanded${separator}${className}`)}`);
       });
     }),
   ],

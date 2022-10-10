@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Transition from '../../utils/Transition';
 
-import UserAvatar from '../../images/user-avatar-32.png';
+import UserAvatar from '../../images/circle-user-solid-dark.svg';
 
 function UserMenu() {
 
@@ -32,18 +32,18 @@ function UserMenu() {
   });
 
   return (
-    <div className="relative inline-flex">
+    <div className="relative inline-flex pl-4 pr-4 bg-gray-900">
       <button
         ref={trigger}
-        className="inline-flex justify-center items-center group"
+        className="inline-flex items-center justify-center group"
         aria-haspopup="true"
         onClick={() => setDropdownOpen(!dropdownOpen)}
         aria-expanded={dropdownOpen}
       >
-        <img className="w-8 h-8 rounded-full" src={UserAvatar} width="32" height="32" alt="User" />
+        <img className="w-8 h-8 bg-gray-900 rounded-full" src={UserAvatar} width="32" height="32" alt="User" />
         <div className="flex items-center truncate">
-          <span className="truncate ml-2 text-sm font-medium group-hover:text-slate-800">AJ Bell</span>
-          <svg className="w-3 h-3 shrink-0 ml-1 fill-current text-slate-400" viewBox="0 0 12 12">
+          <span className="ml-2 text-sm font-medium text-gray-100 truncate group-hover:text-white">AJ Bell</span>
+          <svg className="w-3 h-3 ml-1 text-gray-100 fill-current shrink-0" viewBox="0 0 12 12">
             <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
           </svg>
         </div>
@@ -65,13 +65,13 @@ function UserMenu() {
           onBlur={() => setDropdownOpen(false)}
         >
           <div className="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200">
-            <div className="font-medium text-slate-800">Trading Platform</div>
-            <div className="text-xs text-slate-500 italic">Administrator</div>
+            <div className="font-semibold text-black">Trading Platform</div>
+            <div className="text-xs italic text-gray-700">Administrator</div>
           </div>
           <ul>
             <li>
               <Link
-                className="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3"
+                className="flex items-center px-3 py-1 text-sm text-gray-700 hover:text-gray-900"
                 to="/"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >

@@ -3,6 +3,8 @@ import SearchModal from './header/SearchModal';
 import Notifications from './header/Notifications';
 import Help from './header/Help';
 import UserMenu from './header/UserMenu';
+import HamburgerMenuIcon from '../images/bars-dark.svg';
+
 
 function Header({
   sidebarOpen,
@@ -12,12 +14,12 @@ function Header({
   const [searchModalOpen, setSearchModalOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 bg-white border-b border-slate-200 z-30">
-      <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 -mb-px">
+    <header className="sticky top-0 z-30 bg-gray-900 border-b border-slate-200">
+      <div>
+        <div className="flex items-center justify-between h-16">
 
           {/* Header: Left side */}
-          <div className="flex">
+          <div className="flex-none h-16 px-4 py-2 bg-red-900 sm:px-6 lg:px-8 sm:py-2 lg:py-6">
 
             {/* Hamburger button */}
             <button
@@ -27,22 +29,20 @@ function Header({
               onClick={(e) => { e.stopPropagation(); setSidebarOpen(!sidebarOpen); }}
             >
               <span className="sr-only">Open sidebar</span>
-              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="5" width="16" height="2" />
-                <rect x="4" y="11" width="16" height="2" />
-                <rect x="4" y="17" width="16" height="2" />
-              </svg>
+              <img className="w-12 h-12 bg-white rounded-full" src={HamburgerMenuIcon} width="64" height="64" alt="Menu" />
             </button>
 
+          </div>
+
+          {/* Spacer */}
+          <div className="flex-auto h-16 bg-red-900">
+            ...
           </div>
 
           {/* Header: Right side */}
           <div className="flex items-center">
             <Help />
-            {/*  Divider */}
-            <hr className="w-px h-6 bg-slate-200 mx-3" />
             <UserMenu />
-
           </div>
 
         </div>

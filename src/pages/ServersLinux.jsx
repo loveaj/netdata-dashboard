@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
-import DashboardCard02 from '../partials/dashboard/DashboardCard02';
 import DashboardCard03 from '../partials/dashboard/DashboardCard03';
-import DashboardCard04 from '../partials/dashboard/DashboardCard04';
 
 
-function Dashboard() {
+function ServersLinux() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -30,16 +28,12 @@ function Dashboard() {
                 Infrastructure
             </div>
             <div className="mb-10 text-2xl font-light text-gray-500">
-                IBM i
+                Linux servers
             </div>
             {/* Cards */}
             <div className="grid grid-cols-12 gap-6">
-              {/* Gauge chart (Memory utilisation) */}
-              <DashboardCard02 />
               {/* Gauge chart (CPU utilisation) */}
               <DashboardCard03 />
-              {/* Area chart (System I/O) */}
-              <DashboardCard04 />
             </div>
  
           </div>
@@ -48,4 +42,4 @@ function Dashboard() {
     </div>      
   );
 }
-export default Dashboard;
+export default ServersLinux;

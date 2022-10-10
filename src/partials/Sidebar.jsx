@@ -3,6 +3,10 @@ import { NavLink, useLocation } from 'react-router-dom';
 
 import SidebarLinkGroup from './SidebarLinkGroup';
 import CompanyLogo from '../images/logo_ajbell_white.svg';
+import MenuIconInfra from '../images/microchip-dark.svg';
+import MenuIconActivity from '../images/compass-dark.svg';
+import MenuIconMore from '../images/share-nodes-dark.svg';
+
 
 
 function Sidebar({ sidebarOpen, setSidebarOpen }) {
@@ -49,7 +53,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
     <div>
       {/* Sidebar backdrop (mobile only) */}
       <div
-        className={`fixed inset-0 bg-slate-900 bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${
+        className={`fixed inset-0 bg-gray-900 bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${
           sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         aria-hidden="true"
@@ -59,16 +63,16 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
       <div
         id="sidebar"
         ref={sidebar}
-        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-slate-800 p-4 transition-all duration-200 ease-in-out ${
+        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-gray-900 p-4 transition-all duration-200 ease-in-out ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-64'
         }`}
       >
         {/* Sidebar header */}
-        <div className="flex justify-between mb-10 pr-3 sm:px-2">
+        <div className="flex justify-between pr-3 mb-10 sm:px-2">
           {/* Close button */}
           <button
             ref={trigger}
-            className="lg:hidden text-slate-500 hover:text-slate-400"
+            className="lg:hidden text-slate-500 hover:text-gray-300"
             onClick={() => setSidebarOpen(!sidebarOpen)}
             aria-controls="sidebar"
             aria-expanded={sidebarOpen}
@@ -79,7 +83,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             </svg>
           </button>
           {/* Logo */}
-          <NavLink end to="/" className="block">
+          <NavLink reloadDocument end to="/" className="block">
             <img src={CompanyLogo} width="160" height="80" alt="Company Logo" />
           </NavLink>
         </div>
@@ -88,22 +92,23 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
         <div className="space-y-8">
           {/* Pages group */}
           <div>
-            <h3 className="text-xs uppercase text-slate-500 font-semibold pl-3">
-              <span className="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">
-                •••
+            <h3 className="pl-3 text-xs font-semibold text-gray-500 uppercase">
+              <span className="hidden w-6 text-center text-gray-900 lg:block lg:sidebar-expanded:hidden 2xl:hidden" aria-hidden="true">
+                •
               </span>
               <span className="lg:hidden lg:sidebar-expanded:block 2xl:block">Trading Platform Dashboard</span>
             </h3>
             <ul className="mt-3">
-              {/* Dashboard */}
-              <SidebarLinkGroup activecondition={pathname === '/' || pathname.includes('dashboard')}>
+              
+              {/* Platform Infrastructure*/}
+              <SidebarLinkGroup activecondition={pathname === '/' || pathname.includes('infrastructure')}>
                 {(handleClick, open) => {
                   return (
                     <React.Fragment>
                       <a
                         href="#0"
-                        className={`block text-slate-200 hover:text-white truncate transition duration-150 ${
-                          (pathname === '/' || pathname.includes('dashboard')) && 'hover:text-slate-200'
+                        className={`block text-gray-200 hover:text-white truncate transition duration-150 ${
+                          (pathname === '/' || pathname.includes('infrastructure')) && 'hover:text-gray-200'
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
@@ -112,68 +117,54 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
-                            <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                              <path
-                                className={`fill-current text-slate-400 ${
-                                  (pathname === '/' || pathname.includes('dashboard')) && '!text-red-500'
-                                }`}
-                                d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0z"
-                              />
-                              <path
-                                className={`fill-current text-slate-600 ${(pathname === '/' || pathname.includes('dashboard')) && 'text-red-800'}`}
-                                d="M12 3c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.037 9-9-4.037-9-9-9z"
-                              />
-                              <path
-                                className={`fill-current text-slate-400 ${(pathname === '/' || pathname.includes('dashboard')) && 'text-red-200'}`}
-                                d="M12 15c-1.654 0-3-1.346-3-3 0-.462.113-.894.3-1.285L6 6l4.714 3.301A2.973 2.973 0 0112 9c1.654 0 3 1.346 3 3s-1.346 3-3 3z"
-                              />
-                            </svg>
-                            <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                              Platform Infrastructure
+                            <img className="w-8 h-8 bg-gray-900 rounded-full" src={MenuIconInfra} width="32" height="32" alt="Infrastructure" />
+                            <span className="ml-2 text-sm font-bold duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
+                              Infrastructure
                             </span>
                           </div>
                           {/* Icon */}
-                          <div className="flex shrink-0 ml-2">
-                            <svg className={`w-3 h-3 shrink-0 ml-1 fill-current text-slate-400 ${open && 'rotate-180'}`} viewBox="0 0 12 12">
+                          <div className="flex ml-2 shrink-0">
+                            <svg className={`w-3 h-3 shrink-0 ml-1 fill-current text-gray-300 ${open && 'rotate-180'}`} viewBox="0 0 12 12">
                               <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
                             </svg>
                           </div>
                         </div>
                       </a>
                       <div className="lg:hidden lg:sidebar-expanded:block 2xl:block">
-                        <ul className={`pl-9 mt-1 ${!open && 'hidden'}`}>
+                        <ul className={`pl-10 mt-1 ${!open && 'hidden'}`}>
                           <li className="mb-1 last:mb-0">
                             <NavLink
+                              reloadDocument
                               end
-                              to="/"
-                              className={({ isActive }) =>
-                                'block text-slate-400 hover:text-slate-200 transition duration-150 truncate ' + (isActive ? '!text-red-500' : '')
-                              }
+                              to="/infrastructure/ibmi"
+                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 IBM i
                               </span>
                             </NavLink>
                           </li>
                           <li className="mb-1 last:mb-0">
                             <NavLink
+                              reloadDocument
                               end
-                              to="/"
-                              className="block text-slate-400 hover:text-slate-200 transition duration-150 truncate"
+                              to="/infrastructure/serverslinux"
+                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                                VMs Linux
+                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
+                                Linux servers
                               </span>
                             </NavLink>
                           </li>
                           <li className="mb-1 last:mb-0">
                             <NavLink
+                              reloadDocument
                               end
                               to="/"
-                              className="block text-slate-400 hover:text-slate-200 transition duration-150 truncate"
+                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                                VMs Windows
+                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
+                                Windows servers
                               </span>
                             </NavLink>
                           </li>
@@ -183,15 +174,16 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   );
                 }}
               </SidebarLinkGroup>
-              {/* E-Commerce */}
-              <SidebarLinkGroup activecondition={pathname.includes('ecommerce')}>
+
+              {/* Platform Activity */}
+              <SidebarLinkGroup activecondition={pathname.includes('activity')}>
                 {(handleClick, open) => {
                   return (
                     <React.Fragment>
                       <a
                         href="#0"
-                        className={`block text-slate-200 hover:text-white truncate transition duration-150 ${
-                          pathname.includes('ecommerce') && 'hover:text-slate-200'
+                        className={`block text-gray-200 hover:text-white truncate transition duration-150 ${
+                          pathname.includes('activity') && 'hover:text-gray-200'
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
@@ -200,85 +192,77 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
-                            <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                              <path
-                                className={`fill-current text-slate-400 ${pathname.includes('ecommerce') && 'text-indigo-300'}`}
-                                d="M13 15l11-7L11.504.136a1 1 0 00-1.019.007L0 7l13 8z"
-                              />
-                              <path
-                                className={`fill-current text-slate-700 ${pathname.includes('ecommerce') && '!text-indigo-600'}`}
-                                d="M13 15L0 7v9c0 .355.189.685.496.864L13 24v-9z"
-                              />
-                              <path
-                                className={`fill-current text-slate-600 ${pathname.includes('ecommerce') && 'text-indigo-500'}`}
-                                d="M13 15.047V24l10.573-7.181A.999.999 0 0024 16V8l-11 7.047z"
-                              />
-                            </svg>
-                            <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                              Platform Activity
+                            <img className="w-8 h-8 bg-gray-900 rounded-full" src={MenuIconActivity} width="32" height="32" alt="Activity" />
+                            <span className="ml-2 text-sm font-bold duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
+                              Business Activity
                             </span>
                           </div>
                           {/* Icon */}
-                          <div className="flex shrink-0 ml-2">
-                            <svg className={`w-3 h-3 shrink-0 ml-1 fill-current text-slate-400 ${open && 'rotate-180'}`} viewBox="0 0 12 12">
+                          <div className="flex ml-2 shrink-0">
+                            <svg className={`w-3 h-3 shrink-0 ml-1 fill-current text-gray-300 ${open && 'rotate-180'}`} viewBox="0 0 12 12">
                               <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
                             </svg>
                           </div>
                         </div>
                       </a>
                       <div className="lg:hidden lg:sidebar-expanded:block 2xl:block">
-                        <ul className={`pl-9 mt-1 ${!open && 'hidden'}`}>
+                        <ul className={`pl-10 mt-1 ${!open && 'hidden'}`}>
                           <li className="mb-1 last:mb-0">
                             <NavLink
+                              reloadDocument
                               end
                               to="/"
-                              className="block text-slate-400 hover:text-slate-200 transition duration-150 truncate"
+                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 Summary
                               </span>
                             </NavLink>
                           </li>
                           <li className="mb-1 last:mb-0">
                             <NavLink
+                              reloadDocument
                               end
                               to="/"
-                              className="block text-slate-400 hover:text-slate-200 transition duration-150 truncate"
+                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 APIs
                               </span>
                             </NavLink>
                           </li>
                           <li className="mb-1 last:mb-0">
                             <NavLink
+                              reloadDocument
                               end
                               to="/"
-                              className="block text-slate-400 hover:text-slate-200 transition duration-150 truncate"
+                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 Trading
                               </span>
                             </NavLink>
                           </li>
                           <li className="mb-1 last:mb-0">
                             <NavLink
+                              reloadDocument
                               end
                               to="/"
-                              className="block text-slate-400 hover:text-slate-200 transition duration-150 truncate"
+                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 Cash in
                               </span>
                             </NavLink>
                           </li>
                           <li className="mb-1 last:mb-0">
                             <NavLink
+                              reloadDocument
                               end
                               to="/"
-                              className="block text-slate-400 hover:text-slate-200 transition duration-150 truncate"
+                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
-                              <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 Cash out
                               </span>
                             </NavLink>
@@ -289,50 +273,41 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   );
                 }}
               </SidebarLinkGroup>
-              {/* Inbox */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('inbox') && 'bg-slate-900'}`}>
+
+              {/* More ... */}
+              <li className={`px-2 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('more') && 'bg-gray-900'}`}>
                 <NavLink
+                  reloadDocument
                   end
                   to="/"
-                  className={`block text-slate-200 hover:text-white truncate transition duration-150 ${
-                    pathname.includes('inbox') && 'hover:text-slate-200'
+                  className={`block text-gray-200 hover:text-white truncate transition duration-150 ${
+                    pathname.includes('more') && 'hover:text-gray-200'
                   }`}
                 >
                   <div className="flex items-center">
-                    <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                      <path
-                        className={`fill-current text-slate-400 ${pathname.includes('ecommerce') && 'text-indigo-300'}`}
-                        d="M13 15l11-7L11.504.136a1 1 0 00-1.019.007L0 7l13 8z"
-                      />
-                      <path
-                        className={`fill-current text-slate-700 ${pathname.includes('ecommerce') && '!text-indigo-600'}`}
-                        d="M13 15L0 7v9c0 .355.189.685.496.864L13 24v-9z"
-                      />
-                      <path
-                        className={`fill-current text-slate-600 ${pathname.includes('ecommerce') && 'text-indigo-500'}`}
-                        d="M13 15.047V24l10.573-7.181A.999.999 0 0024 16V8l-11 7.047z"
-                      />
-                    </svg>
-                    <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">More ...</span>
+                    <img className="w-8 h-8 bg-gray-900 rounded-full" src={MenuIconMore} width="32" height="32" alt="More" />
+                    <span className="ml-2 text-sm font-bold duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">More ...</span>
                   </div>
                 </NavLink>
               </li>
+
             </ul>
           </div>
         </div>
 
         {/* Expand / collapse button */}
-        <div className="pt-3 hidden lg:inline-flex 2xl:hidden justify-end mt-auto">
+        <div className="justify-end hidden pt-3 mt-auto lg:inline-flex 2xl:hidden">
           <div className="px-3 py-2">
             <button onClick={() => setSidebarExpanded(!sidebarExpanded)}>
               <span className="sr-only">Expand / collapse sidebar</span>
               <svg className="w-6 h-6 fill-current sidebar-expanded:rotate-180" viewBox="0 0 24 24">
-                <path className="text-slate-400" d="M19.586 11l-5-5L16 4.586 23.414 12 16 19.414 14.586 18l5-5H7v-2z" />
+                <path className="text-gray-300" d="M19.586 11l-5-5L16 4.586 23.414 12 16 19.414 14.586 18l5-5H7v-2z" />
                 <path className="text-slate-600" d="M3 23H1V1h2z" />
               </svg>
             </button>
           </div>
         </div>
+
       </div>
     </div>
   );

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LineChart from '../../charts/LineChart01';
-import Icon from '../../images/icon-01.svg';
-import EditMenu from '../EditMenu';
 
 // Import utilities
 import { tailwindConfig, hexToRGB } from '../../utils/Utils';
@@ -60,26 +58,14 @@ function DashboardCard01() {
   };
 
   return (
-    <div className="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white shadow-lg rounded-sm border border-slate-200">
+    <div className="flex flex-col bg-white border rounded-sm shadow-lg col-span-full sm:col-span-6 xl:col-span-4 border-slate-200">
       <div className="px-5 pt-5">
-        <header className="flex justify-between items-start mb-2">
-          {/* Menu button */}
-          <EditMenu className="relative inline-flex">
-            <li>
-              <Link className="font-medium text-sm text-slate-600 hover:text-slate-800 flex py-1 px-3" to="#0">Option 1</Link>
-            </li>
-            <li>
-              <Link className="font-medium text-sm text-slate-600 hover:text-slate-800 flex py-1 px-3" to="#0">Option 2</Link>
-            </li>
-            <li>
-              <Link className="font-medium text-sm text-rose-500 hover:text-rose-600 flex py-1 px-3" to="#0">Remove</Link>
-            </li>
-          </EditMenu>
+        <header className="flex items-start justify-between mb-2">
         </header>
-        <h2 className="text-lg font-semibold text-slate-800 mb-2">IBM i LPAR</h2>
-        <div className="text-xs font-semibold text-slate-400 uppercase mb-1">AJBPROD</div>
+        <h2 className="mb-2 text-lg font-semibold text-slate-800">IBM i LPAR</h2>
+        <div className="mb-1 text-xs font-semibold uppercase text-slate-400">AJBPROD</div>
         <div className="flex items-start">
-          <div className="text-3xl font-bold text-slate-800 mr-2">CPU utilisation</div>
+          <div className="mr-2 text-3xl font-bold text-slate-800">CPU utilisation</div>
         </div>
       </div>
       {/* Chart built with Chart.js 3 */}
