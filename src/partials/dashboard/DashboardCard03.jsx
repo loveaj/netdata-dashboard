@@ -8,7 +8,7 @@ function DashboardCard03() {
         <header className="flex items-start justify-between mb-2">
         </header>
         <h2 className="mb-2 text-lg font-semibold text-slate-800">CPU Utilisation</h2>
-        <div className="w-8 pt-0.5 px-1.5 mb-1 text-xs font-semibold text-white uppercase rounded-full bg-sky-500">UAT</div>
+        <div className="w-8 pt-0.5 px-1.5 mb-1 text-xs font-semibold text-white uppercase rounded-full bg-sky-500">{PLATFORM.environment}</div>
       </div>
       <div className="grow">
         <div data-netdata="system.cpu" 

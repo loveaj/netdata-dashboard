@@ -101,14 +101,14 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <ul className="mt-3">
               
               {/* Platform Infrastructure*/}
-              <SidebarLinkGroup activecondition={pathname === '/' || pathname.includes('infrastructure')}>
+              <SidebarLinkGroup activecondition={pathname === '/' || pathname.includes('platform')}>
                 {(handleClick, open) => {
                   return (
                     <React.Fragment>
                       <a
                         href="#0"
                         className={`block text-gray-200 hover:text-white truncate transition duration-150 ${
-                          (pathname === '/' || pathname.includes('infrastructure')) && 'hover:text-gray-200'
+                          (pathname === '/' || pathname.includes('platform')) && 'hover:text-gray-200'
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
@@ -136,7 +136,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             <NavLink
                               reloadDocument
                               end
-                              to="/infrastructure/ibmi"
+                              to="/platform/ibmi"
                               className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
@@ -148,7 +148,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             <NavLink
                               reloadDocument
                               end
-                              to="/infrastructure/serverslinux"
+                              to="/platform/serverslinux"
                               className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
@@ -160,7 +160,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             <NavLink
                               reloadDocument
                               end
-                              to="/"
+                              to="/platform/example"
                               className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
@@ -176,7 +176,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
               </SidebarLinkGroup>
 
               {/* Platform Activity */}
-              <SidebarLinkGroup activecondition={pathname.includes('activity')}>
+              <SidebarLinkGroup activecondition={pathname.includes('platform')}>
                 {(handleClick, open) => {
                   return (
                     <React.Fragment>

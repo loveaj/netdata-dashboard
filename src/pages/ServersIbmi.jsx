@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
-import DashboardCard02 from '../partials/dashboard/DashboardCard02';
-import DashboardCard03 from '../partials/dashboard/DashboardCard03';
-import DashboardCard04 from '../partials/dashboard/DashboardCard04';
+import DashboardCardIbmiAspUsedPercent from '../partials/dashboard/DashboardCardIbmiAspUsedPercent';
+import DashboardCardIbmiAspUsed from '../partials/dashboard/DashboardCardIbmiAspUsed';
+import DashboardCardIbmiCpuUtilisation from '../partials/dashboard/DashboardCardIbmiCpuUtilisation';
 
-function Dashboard() {
+
+function ServersIbmi() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -29,16 +30,16 @@ function Dashboard() {
                 Infrastructure
             </div>
             <div className="mb-10 text-2xl font-light text-gray-500">
-                Example
+                IBM i
             </div>
             {/* Cards */}
             <div className="grid grid-cols-12 gap-6">
-              {/* Gauge chart (RAM utilisation %) */}
-              <DashboardCard02 />
-              {/* Gauge chart (CPU utilisation) */}
-              <DashboardCard03 />
-              {/* Area chart (System I/O) */}
-              <DashboardCard04 />
+              {/* Gauge chart (ASP utilisation %) */}
+              <DashboardCardIbmiAspUsedPercent />
+              {/* Area chart (ASP utilisation) */}
+              <DashboardCardIbmiAspUsed />
+              {/* Area chart (CPU utilisation) */}
+              <DashboardCardIbmiCpuUtilisation />
             </div>
  
           </div>
@@ -47,4 +48,4 @@ function Dashboard() {
     </div>      
   );
 }
-export default Dashboard;
+export default ServersIbmi;
