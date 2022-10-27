@@ -11,6 +11,7 @@ import './css/style.css';
 import Dashboard from './pages/Dashboard';
 import ServersLinux from './pages/ServersLinux';
 import ServersIbmi from './pages/ServersIbmi';
+import Topology from './pages/Topology';
 
 
 function App() {
@@ -54,7 +55,7 @@ useEffect(() => {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/" element={<Topology />} />
         <Route exact path="/platform/example" element={<Dashboard />} />
         <Route path="/platform/ibmi" element={<ServersIbmi />} />
         <Route path="/platform/serverslinux" element={<ServersLinux />} />
