@@ -27,9 +27,11 @@ function DashboardCardTopology() {
 
   // Draw the node
   const paintNode = useCallback((node, ctx, globalScale) => {
-    const label = node.id;
-    const fontSize = 8/globalScale;
-    ctx.font = `${fontSize}px Sans-Serif`;  
+    const nodeid = node.id;
+    const nodelabel = node.description;
+    const fontSize = 10/globalScale;
+    const lineHeight = fontSize * 1.2;
+    ctx.font = `bold ${fontSize}px Sans-Serif`;  
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
@@ -42,8 +44,9 @@ function DashboardCardTopology() {
     ctx.strokeStyle = node.colour;
     ctx.stroke();
 
-    ctx.fillStyle = 'black  ';
-    ctx.fillText(label, node.x, node.y);
+    ctx.fillStyle = 'gray';
+    ctx.fillText(nodeid, node.x, node.y);
+
   }, []);
 
 
@@ -76,6 +79,7 @@ function DashboardCardTopology() {
           }
           nodeCanvasObjectMode={() => "after"}
           nodeCanvasObject={paintNode}
+          nodeLabel={node => `${node.label}`}
           onNodeClick={node => window.location.replace(`${node.dashlink}`)}
           
         />

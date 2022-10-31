@@ -1,6 +1,7 @@
 {
     "nodes": [{
             "id": "AJBCOPY",
+            "label": "IBM i",
             "group": 1,
             "colour": "#1775e5",
             "scale": 6,
@@ -9,6 +10,7 @@
         },
         {
             "id": "BCA-AJC-HT-01",
+            "label": "Apache HTTPS endpoint",
             "group": 2,
             "colour": "#ad70d5",
             "scale": 4,
@@ -17,6 +19,7 @@
         },
         {
             "id": "BCA-AJC-TC-01",
+            "label": "Funds and Shares Site",
             "group": 2,
             "colour": "#ad70d5",
             "scale": 4,
@@ -25,6 +28,7 @@
         },
         {
             "id": "BCA-AJC-TC-06",
+            "label": "APIs",
             "group": 2,
             "colour": "#ad70d5",
             "scale": 4,
@@ -33,6 +37,7 @@
         },
         {
             "id": "BCA-AJC-TC-08",
+            "label": "APIs",
             "group": 2,
             "colour": "#ad70d5",
             "scale": 4,
@@ -41,6 +46,7 @@
         },
         {
             "id": "BCA-AJC-LD-01",
+            "label": "OpenLDAP",
             "group": 2,
             "colour": "#ad70d5",
             "scale": 4,
@@ -49,6 +55,25 @@
         },
         {
             "id": "BCA-AJC-DS-01",
+            "label": "RSP DealServer",
+            "group": 3,
+            "colour": "#21d180",
+            "scale": 4,
+            "os": "Windows",
+            "dashlink": "/platform/example"
+        },
+        {
+            "id": "BCA-AJC-DS-02",
+            "label": "RSP DealServer",
+            "group": 3,
+            "colour": "#21d180",
+            "scale": 4,
+            "os": "Windows",
+            "dashlink": "/platform/example"
+        },
+        {
+            "id": "BCA-AJC-DS-03",
+            "label": "RSP DealServer",
             "group": 3,
             "colour": "#21d180",
             "scale": 4,
@@ -89,6 +114,26 @@
         {
             "source": "BCA-AJC-TC-08",
             "target": "BCA-AJC-DS-01",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-06",
+            "target": "BCA-AJC-DS-02",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-08",
+            "target": "BCA-AJC-DS-02",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-06",
+            "target": "BCA-AJC-DS-03",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-08",
+            "target": "BCA-AJC-DS-03",
             "value": 5
         }
     ]

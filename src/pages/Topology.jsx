@@ -21,8 +21,8 @@ function Topology() {
         {/*  Site header */}
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-        <main>
-          <div className="w-full px-4 py-8 mx-auto sm:px-6 lg:px-8 max-w-9xl">
+        <main className="min-w-full min-h-full">
+          <div className="min-w-full min-h-full px-4 py-8 mx-auto sm:px-6 lg:px-8">
 
             <div className="mb-2 text-4xl font-light text-gray-900">
                 Infrastructure
@@ -31,7 +31,7 @@ function Topology() {
                 Topology
             </div>
             {/* Cards */}
-            <div className="w-full px-4 py-8 mx-auto sm:px-6 lg:px-8 max-w-9xl">
+            <div className="min-w-full min-h-full px-4 py-8 mx-auto sm:px-6 lg:px-8">
               {/* Gauge chart (CPU utilisation) */}
               <DashboardCardTopology />
             </div>
