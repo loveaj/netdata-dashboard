@@ -21,15 +21,16 @@ function DashboardCardIbmiCpuUtilisation() {
         <div data-netdata="ibmi_remote.cpu_utilisation" 
               data-host="http://localhost:19999/"
               data-chart-library="dygraph" 
-              data-dygraph-type="area"
+              data-dygraph-type="sparkline"
               data-title="" 
               data-width="95%"
               data-height="260px"
               data-after="-300"
               data-append-options="match-ids"
               data-dygraph-valuerange="[0, null]"
+              data-dygraph-strokewidth="1.5"
               data-dimensions="system_min_cpu_utilisation,system_avg_cpu_utilisation,system_max_cpu_utilisation"
-              data-colors="#00b5e2 #78be20 #fdb913"
+              data-colors="#ef5675 #ffa600 #7a5195"
         >
         </div>
       </div>

@@ -5,7 +5,13 @@ import Header from '../partials/Header';
 import DashboardCardIbmiAspUsedPercent from '../partials/dashboard/DashboardCardIbmiAspUsedPercent';
 import DashboardCardIbmiAspUsed from '../partials/dashboard/DashboardCardIbmiAspUsed';
 import DashboardCardIbmiCpuUtilisation from '../partials/dashboard/DashboardCardIbmiCpuUtilisation';
-
+import DashboardCardIbmiJobs from '../partials/dashboard/DashboardCardIbmiJobs';
+import DashboardCardIbmiMemoryPoolSizes from '../partials/dashboard/DashboardCardIbmiMemoryPoolSizes'
+import DashboardCardIbmiMemoryDatabaseFaults from '../partials/dashboard/DashboardCardIbmiMemoryDatabaseFaults'
+import DashboardCardIbmiMemoryNonDatabaseFaults from '../partials/dashboard/DashboardCardIbmiMemoryNonDatabaseFaults'
+import DashboardCardIbmiMemoryActiveToIneligible from '../partials/dashboard/DashboardCardIbmiMemoryActiveToIneligible'
+import DashboardCardIbmiMemoryActiveToWait from '../partials/dashboard/DashboardCardIbmiMemoryActiveToWait'
+import DashboardCardIbmiMemoryWaitToIneligible from '../partials/dashboard/DashboardCardIbmiMemoryWaitToIneligible'
 
 function ServersIbmi() {
 
@@ -40,6 +46,20 @@ function ServersIbmi() {
               <DashboardCardIbmiAspUsed />
               {/* Area chart (CPU utilisation) */}
               <DashboardCardIbmiCpuUtilisation />
+              {/* Area chart (Job stats) */}
+              <DashboardCardIbmiJobs />
+              {/* Area chart (Memory pool sizes) */}
+              <DashboardCardIbmiMemoryPoolSizes />
+              {/* Area chart (Memory pool database faults) */}
+              <DashboardCardIbmiMemoryDatabaseFaults />
+              {/* Area chart (Memory pool non-database faults) */}
+              <DashboardCardIbmiMemoryNonDatabaseFaults />
+              {/* Area chart (Memory pool thread transitions from Active to Ineligible) */}
+              <DashboardCardIbmiMemoryActiveToIneligible />
+              {/* Area chart (Memory pool thread transitions from Active to Wait) */}
+              <DashboardCardIbmiMemoryActiveToWait />
+              {/* Area chart (Memory pool thread transitions from Wait to Ineligible) */}
+              <DashboardCardIbmiMemoryWaitToIneligible />
             </div>
  
           </div>
