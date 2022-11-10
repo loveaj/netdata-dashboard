@@ -9,6 +9,8 @@ import DashboardCardIbmiJobs from '../partials/dashboard/DashboardCardIbmiJobs';
 import DashboardCardIbmiMemoryPoolSizes from '../partials/dashboard/DashboardCardIbmiMemoryPoolSizes'
 import DashboardCardIbmiMemoryDatabaseFaults from '../partials/dashboard/DashboardCardIbmiMemoryDatabaseFaults'
 import DashboardCardIbmiMemoryNonDatabaseFaults from '../partials/dashboard/DashboardCardIbmiMemoryNonDatabaseFaults'
+import DashboardCardIbmiMemoryDatabasePages from '../partials/dashboard/DashboardCardIbmiMemoryDatabasePages'
+import DashboardCardIbmiMemoryNonDatabasePages from '../partials/dashboard/DashboardCardIbmiMemoryNonDatabasePages'
 import DashboardCardIbmiMemoryActiveToIneligible from '../partials/dashboard/DashboardCardIbmiMemoryActiveToIneligible'
 import DashboardCardIbmiMemoryActiveToWait from '../partials/dashboard/DashboardCardIbmiMemoryActiveToWait'
 import DashboardCardIbmiMemoryWaitToIneligible from '../partials/dashboard/DashboardCardIbmiMemoryWaitToIneligible'
@@ -54,6 +56,10 @@ function ServersIbmi() {
               <DashboardCardIbmiMemoryDatabaseFaults />
               {/* Area chart (Memory pool non-database faults) */}
               <DashboardCardIbmiMemoryNonDatabaseFaults />
+              {/* Area chart (Memory pool database pages) */}
+              <DashboardCardIbmiMemoryDatabasePages />
+              {/* Area chart (Memory pool non-database pages) */}
+              <DashboardCardIbmiMemoryNonDatabasePages />
               {/* Area chart (Memory pool thread transitions from Active to Ineligible) */}
               <DashboardCardIbmiMemoryActiveToIneligible />
               {/* Area chart (Memory pool thread transitions from Active to Wait) */}
