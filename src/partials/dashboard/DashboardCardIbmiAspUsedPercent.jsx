@@ -9,7 +9,7 @@ function DashboardCardIbmiAspUsedPercent() {
         </header>
         <h2 className="mb-2 text-lg font-semibold text-slate-800">ASP Utilisation</h2>
         <div className="flex items-start">
-          <div className="mb-2 text-slate-600">The percentage of the system storage pool currently in use.</div>
+          <div className="mb-2 text-xs text-slate-600">The percentage of the system storage pool currently in use.</div>
         </div>
         <div className="inline-flex w-12 pt-0.5 px-1.5 mb-1 text-xs font-semibold text-white uppercase rounded-full bg-sky-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="2" stroke="currentColor" aria-hidden="true" class="-tr-ml-1 tr-mr-2.5 tr-h-4 tr-w-4">
@@ -19,7 +19,7 @@ function DashboardCardIbmiAspUsedPercent() {
           {PLATFORM.environment}
         </div>
       </div>
-      <div className="ml-20 grow">
+      <div className="ml-15 grow">
         <div data-netdata="ibmi_remote.asp_used_percent" 
               data-host="http://localhost:19999/"
               data-chart-library="easypiechart" 

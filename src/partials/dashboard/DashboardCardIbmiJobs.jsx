@@ -10,7 +10,7 @@ function DashboardCardIbmiJobs() {
         </header>
         <h2 className="mb-2 text-lg font-semibold text-slate-800">Job Information</h2>
         <div className="flex items-start">
-          <div className="mb-2 text-slate-600">
+          <div className="mb-2 text-xs text-slate-600">
             The total number of user and system jobs that are currently in the system. <br/>
             The number of jobs active in the system (jobs that have been started, but have not yet ended), including both user and system jobs.<br/>
             The number of interactive jobs active in the system.

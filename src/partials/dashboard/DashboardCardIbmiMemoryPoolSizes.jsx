@@ -9,7 +9,7 @@ function DashboardCardIbmiMemoryPoolSizes() {
         <header className="flex items-start justify-between mb-2">
         </header>
         <h2 className="mb-2 text-lg font-semibold text-slate-800">Memory Pool Current Sizes</h2>
-        <div className="mb-2 text-slate-600">
+        <div className="mb-2 text-xs text-slate-600">
             The amount of main storage in each memory pool.<br/>
         </div>
         <div className="inline-flex w-12 pt-0.5 px-1.5 mb-1 text-xs font-semibold text-white uppercase rounded-full bg-sky-500">

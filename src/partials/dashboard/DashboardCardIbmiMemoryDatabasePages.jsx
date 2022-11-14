@@ -9,7 +9,7 @@ function DashboardCardIbmiMemoryDatabasePages() {
         <header className="flex items-start justify-between mb-2">
         </header>
         <h2 className="mb-2 text-lg font-semibold text-slate-800">Memory Pool Database Pages</h2>
-        <div className="mb-2 text-slate-600">
+        <div className="mb-2 text-xs text-slate-600">
           The rate, in pages per second, at which database pages are brought into the storage pool.<br/>
         </div>
         <div className="inline-flex w-12 pt-0.5 px-1.5 mb-1 text-xs font-semibold text-white uppercase rounded-full bg-sky-500">
