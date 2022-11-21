@@ -21,7 +21,7 @@ function DashboardCardTopology() {
   // Set some force and distance parameters
   useEffect(() => {
     forceRef.current.d3Force("charge").strength(-40);
-    forceRef.current.d3Force("link").distance(40);
+    forceRef.current.d3Force("link").distance(150);
     forceRef.current.d3Force("charge").distanceMax(100);
   }, []);
 
@@ -60,8 +60,8 @@ function DashboardCardTopology() {
         <ForceGraph2D
           graphData={graphData}
           backgroundColor="white"
-          width={window.innerWidth*0.5}
-          height={650}
+          width={window.innerWidth*0.6}
+          height={800}
           ref={forceRef}
           cooldownTicks={50}
           nodeRelSize={3}
@@ -72,7 +72,7 @@ function DashboardCardTopology() {
           linkWidth={1}
           onEngineStop={() => {
               if (initialCentre) {
-                forceRef.current.zoom(3.5, 400);
+                forceRef.current.zoomToFit(400, 50);
               }
               setInitialCentre(false);  
             }
@@ -81,7 +81,11 @@ function DashboardCardTopology() {
           nodeCanvasObject={paintNode}
           nodeLabel={node => `${node.label}`}
           onNodeClick={node => window.location.replace(`${node.dashlink}`)}
-          
+          onNodeDragEnd={node => {
+            node.fx = node.x;
+            node.fy = node.y;
+            node.fz = node.z;
+          }}
         />
       </div>
     </div>
