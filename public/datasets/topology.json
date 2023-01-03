@@ -3,7 +3,7 @@
             "id": "AJBCOPY",
             "label": "IBM i",
             "group": 1,
-            "colour": "#1775e5",
+            "colour": "#082e9e",
             "scale": 6,
             "os": "OS/400",
             "dashlink": "/platform/ibmi"
@@ -12,7 +12,7 @@
             "id": "BCA-AJC-HT-01",
             "label": "Apache HTTPS endpoint",
             "group": 2,
-            "colour": "#ad70d5",
+            "colour": "#ee0600",
             "scale": 4,
             "os": "Linux",
             "dashlink": "/platform/serverslinux"
@@ -21,7 +21,7 @@
             "id": "BCA-AJC-TC-01",
             "label": "Funds and Shares Site",
             "group": 2,
-            "colour": "#ad70d5",
+            "colour": "#ee0600",
             "scale": 4,
             "os": "Linux",
             "dashlink": "/platform/serverslinux"
@@ -30,7 +30,7 @@
             "id": "BCA-AJC-TC-06",
             "label": "APIs",
             "group": 2,
-            "colour": "#ad70d5",
+            "colour": "#ee0600",
             "scale": 4,
             "os": "Linux",
             "dashlink": "/platform/serverslinux"
@@ -39,7 +39,7 @@
             "id": "BCA-AJC-TC-08",
             "label": "APIs",
             "group": 2,
-            "colour": "#ad70d5",
+            "colour": "#ee0600",
             "scale": 4,
             "os": "Linux",
             "dashlink": "/platform/serverslinux"
@@ -48,7 +48,7 @@
             "id": "BCA-AJC-LD-01",
             "label": "OpenLDAP",
             "group": 2,
-            "colour": "#ad70d5",
+            "colour": "#ee0600",
             "scale": 4,
             "os": "Linux",
             "dashlink": "/platform/serverslinux"
@@ -57,7 +57,7 @@
             "id": "BCA-AJC-MD-01",
             "label": "Market Data Streamimg",
             "group": 2,
-            "colour": "#ad70d5",
+            "colour": "#ee0600",
             "scale": 4,
             "os": "Linux",
             "dashlink": "/platform/serverslinux"
@@ -66,7 +66,7 @@
             "id": "BCA-AJC-MD-02",
             "label": "Market Data Streamimg",
             "group": 2,
-            "colour": "#ad70d5",
+            "colour": "#ee0600",
             "scale": 4,
             "os": "Linux",
             "dashlink": "/platform/serverslinux"
@@ -75,7 +75,7 @@
             "id": "BCA-AJC-DS-01",
             "label": "RSP DealServer",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -84,7 +84,7 @@
             "id": "BCA-AJC-DS-02",
             "label": "RSP DealServer",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -93,7 +93,7 @@
             "id": "BCA-AJC-DS-03",
             "label": "RSP DealServer",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -102,7 +102,7 @@
             "id": "BCA-AJC-ER-01",
             "label": "Erik Server",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -111,7 +111,7 @@
             "id": "BCA-AJC-ER-02",
             "label": "Erik Server",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -120,7 +120,7 @@
             "id": "BCA-AJC-ER-03",
             "label": "Erik Server",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -129,7 +129,7 @@
             "id": "BCA-AJC-IR-01",
             "label": "IRESS DealServer",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -138,7 +138,7 @@
             "id": "BCA-AJC-IR-02",
             "label": "IRESS DealServer",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -147,7 +147,7 @@
             "id": "BCA-AJC-IR-03",
             "label": "IRESS DealServer",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -156,7 +156,7 @@
             "id": "BCA-AJC-FT-01",
             "label": "FTP Server",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -165,7 +165,7 @@
             "id": "BCA-AJC-HI-01",
             "label": "Hitec DSX DealServer",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -174,7 +174,7 @@
             "id": "BCA-AJC-MW-01",
             "label": " SS3 Middleware Server",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
@@ -183,7 +183,7 @@
             "id": "BCA-AJC-MW-02",
             "label": " SS3 Middleware Server",
             "group": 3,
-            "colour": "#21d180",
+            "colour": "#178add",
             "scale": 4,
             "os": "Windows",
             "dashlink": "/platform/example"
