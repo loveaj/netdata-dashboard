@@ -136,7 +136,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             <NavLink
                               reloadDocument
                               end
-                              to="/platform/ibmi"
+                              to="/platform/ibmi?targetHost=AJBCOPY"
                               className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
@@ -148,7 +148,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             <NavLink
                               reloadDocument
                               end
-                              to="/platform/serverslinux"
+                              to="/platform/serverlinux?targetHost=localhost"
                               className="block text-gray-300 truncate transition duration-150 hover:text-white"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">

@@ -56,7 +56,7 @@ function DashboardCardTopology() {
       <div className="px-5 pt-5">
         <h2 className="mb-2 text-lg font-semibold text-slate-800">UAT</h2>
       </div>
-      <div classname="place-content-center">
+      <div className="place-content-center">
         <ForceGraph2D
           graphData={graphData}
           backgroundColor="white"

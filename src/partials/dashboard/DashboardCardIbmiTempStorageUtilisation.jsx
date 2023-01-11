@@ -1,15 +1,16 @@
 import React  from 'react';
 
-function DashboardCardIbmiAspUsed() {
+function DashboardCardIbmiTempStorageUtilisation() {
 
+ 
   return (
     <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">
       <div className="px-5 pt-5">
         <header className="flex items-start justify-between mb-2">
         </header>
-        <h2 className="mb-2 text-lg font-semibold text-slate-800">ASP Used</h2>
+        <h2 className="mb-2 text-lg font-semibold text-slate-800">Temporary Storage Utilisation</h2>
         <div className="flex items-start">
-          <div className="mb-2 text-xs text-slate-600">The total system storage pool capacity and amount currently in use.</div>
+          <div className="mb-2 text-xs text-slate-600">The current and maximum amounts of storage in use for temporary objects.</div>
         </div>
         <div className="inline-flex w-12 pt-0.5 px-1.5 mb-1 text-xs font-semibold text-white uppercase rounded-full bg-sky-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="2" stroke="currentColor" aria-hidden="true" class="-tr-ml-1 tr-mr-2.5 tr-h-4 tr-w-4">
@@ -20,7 +21,7 @@ function DashboardCardIbmiAspUsed() {
         </div>
       </div>
       <div className="mt-2 mb-2 grow">
-        <div data-netdata="ibmi_remote.asp_utilisation" 
+        <div data-netdata="ibmi_remote.temp_storage_utilisation" 
               data-host="http://localhost:19999/"
               data-chart-library="dygraph" 
               data-dygraph-type="sparkline"
@@ -31,12 +32,12 @@ function DashboardCardIbmiAspUsed() {
               data-append-options="match-ids"
               data-dygraph-valuerange="[0, null]"
               data-dygraph-strokewidth="1.5"
-              data-dimensions="system_disk_used,system_disk_capacity"
-              data-colors="#bc5090 #ef5675"
+              data-dimensions="system_current_temp_storage_used,system_max_temp_storage_used"
+              data-colors="#ef5675 #ffa600 #7a5195"
         >
         </div>
       </div>
     </div>
   );
 }
-export default DashboardCardIbmiAspUsed;
+export default DashboardCardIbmiTempStorageUtilisation;

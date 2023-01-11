@@ -6,7 +6,7 @@
             "colour": "#1775e5",
             "scale": 6,
             "os": "OS/400",
-            "dashlink": "/platform/ibmi"
+            "dashlink": "/platform/ibmi?targetHost=AJBCOPY"
         },
         {
             "id": "BCA-AJC-HT-01",
@@ -15,7 +15,7 @@
             "colour": "#ad70d5",
             "scale": 4,
             "os": "Linux",
-            "dashlink": "/platform/serverslinux"
+            "dashlink": "/platform/serverlinux?targetHost=localhost"
         },
         {
             "id": "BCA-AJC-TC-01",
@@ -24,7 +24,7 @@
             "colour": "#ad70d5",
             "scale": 4,
             "os": "Linux",
-            "dashlink": "/platform/serverslinux"
+            "dashlink": "/platform/serverlinux?targetHost=BCA-AJC-TC-01"
         },
         {
             "id": "BCA-AJC-TC-06",
@@ -33,7 +33,7 @@
             "colour": "#ad70d5",
             "scale": 4,
             "os": "Linux",
-            "dashlink": "/platform/serverslinux"
+            "dashlink": "/platform/serverlinux?targetHost=CA-AJC-TC-06"
         },
         {
             "id": "BCA-AJC-TC-08",
@@ -42,7 +42,7 @@
             "colour": "#ad70d5",
             "scale": 4,
             "os": "Linux",
-            "dashlink": "/platform/serverslinux"
+            "dashlink": "/platform/serverlinux?targetHost=BCA-AJC-TC-08"
         },
         {
             "id": "BCA-AJC-LD-01",
@@ -51,7 +51,7 @@
             "colour": "#ad70d5",
             "scale": 4,
             "os": "Linux",
-            "dashlink": "/platform/serverslinux"
+            "dashlink": "/platform/serverlinux?targetHost=BCA-AJC-LD-01"
         },
         {
             "id": "BCA-AJC-MD-01",
@@ -60,7 +60,7 @@
             "colour": "#ad70d5",
             "scale": 4,
             "os": "Linux",
-            "dashlink": "/platform/serverslinux"
+            "dashlink": "/platform/serverlinux?targetHost=BCA-AJC-MD-01"
         },
         {
             "id": "BCA-AJC-MD-02",
@@ -69,7 +69,7 @@
             "colour": "#ad70d5",
             "scale": 4,
             "os": "Linux",
-            "dashlink": "/platform/serverslinux"
+            "dashlink": "/platform/serverlinux?targetHost=BCA-AJC-MD-02"
         },
         {
             "id": "BCA-AJC-DS-01",

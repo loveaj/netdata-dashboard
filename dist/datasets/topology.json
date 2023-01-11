@@ -15,7 +15,7 @@
             "colour": "#ad70d5",
             "scale": 4,
             "os": "Linux",
-            "dashlink": "/platform/serverslinux"
+            "dashlink": "/platform/serverlinux?targetHost=127.0.0.1"
         },
         {
             "id": "BCA-AJC-TC-01",

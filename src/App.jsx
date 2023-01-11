@@ -2,15 +2,15 @@ import React, { useEffect } from 'react';
 import {
   Routes,
   Route,
-  useLocation
+  useLocation,
 } from 'react-router-dom';
 
 import './css/style.css';
 
 // Import pages
 import Dashboard from './pages/Dashboard';
-import ServersLinux from './pages/ServersLinux';
-import ServersIbmi from './pages/ServersIbmi';
+import ServerIbmi from './pages/ServerIbmi';
+import ServerLinux from './pages/ServerLinux';
 import Topology from './pages/Topology';
 
 
@@ -57,8 +57,8 @@ useEffect(() => {
       <Routes>
         <Route exact path="/" element={<Topology />} />
         <Route exact path="/platform/example" element={<Dashboard />} />
-        <Route path="/platform/ibmi" element={<ServersIbmi />} />
-        <Route path="/platform/serverslinux" element={<ServersLinux />} />
+        <Route path="/platform/ibmi" element={<ServerIbmi />} />
+        <Route path="/platform/serverlinux" element={<ServerLinux />} />
       </Routes>
     </>
   );
