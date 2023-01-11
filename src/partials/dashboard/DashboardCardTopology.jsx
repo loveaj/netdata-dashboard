@@ -1,4 +1,4 @@
-import React,{useRef, useState,useEffect, useCallback} from 'react';
+import React,{useRef, useState, useEffect, useCallback} from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
 
 
@@ -20,8 +20,8 @@ function DashboardCardTopology() {
 
   // Set some force and distance parameters
   useEffect(() => {
-    forceRef.current.d3Force("charge").strength(-40);
-    forceRef.current.d3Force("link").distance(150);
+    forceRef.current.d3Force("charge").strength(-250);
+    forceRef.current.d3Force("link").distance(100);
     forceRef.current.d3Force("charge").distanceMax(100);
   }, []);
 
@@ -48,7 +48,6 @@ function DashboardCardTopology() {
     ctx.fillText(nodeid, node.x, node.y);
 
   }, []);
-
 
   // Return the force node graph
   return (

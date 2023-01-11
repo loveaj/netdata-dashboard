@@ -132,6 +132,18 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                       </a>
                       <div className="lg:hidden lg:sidebar-expanded:block 2xl:block">
                         <ul className={`pl-10 mt-1 ${!open && 'hidden'}`}>
+                        <li className="mb-1 last:mb-0">
+                            <NavLink
+                              reloadDocument
+                              end
+                              to="/"
+                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
+                            >
+                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
+                                Topology
+                              </span>
+                            </NavLink>
+                          </li>                          
                           <li className="mb-1 last:mb-0">
                             <NavLink
                               reloadDocument
