@@ -163,7 +163,7 @@
         },
         {
             "id": "BCA-AJC-HI-01",
-            "label": "Hitec DSX DealServer",
+            "label": "Hitec DSX DMS",
             "group": 3,
             "colour": "#178add",
             "scale": 4,
@@ -205,22 +205,27 @@
             "value": 5
         },
         {
-            "source": "BCA-AJC-TC-06",
-            "target": "AJBCOPY",
-            "value": 5
-        },
-        {
-            "source": "BCA-AJC-TC-08",
-            "target": "AJBCOPY",
-            "value": 5
-        },
-        {
-            "source": "BCA-AJC-TC-06",
+            "source": "BCA-AJC-TC-01",
             "target": "BCA-AJC-DS-01",
             "value": 5
         },
         {
-            "source": "BCA-AJC-TC-08",
+            "source": "BCA-AJC-TC-01",
+            "target": "BCA-AJC-HI-01",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-06",
+            "target": "AJBCOPY",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-06",
+            "target": "BCA-AJC-LD-01",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-06",
             "target": "BCA-AJC-DS-01",
             "value": 5
         },
@@ -230,23 +235,53 @@
             "value": 5
         },
         {
+            "source": "BCA-AJC-TC-06",
+            "target": "BCA-AJC-DS-03",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-06",
+            "target": "BCA-AJC-IR-01",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-06",
+            "target": "BCA-AJC-IR-02",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-06",
+            "target": "BCA-AJC-IR-03",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-06",
+            "target": "BCA-AJC-HI-01",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-08",
+            "target": "AJBCOPY",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-08",
+            "target": "BCA-AJC-LD-01",
+            "value": 5
+        },
+        {
+            "source": "BCA-AJC-TC-08",
+            "target": "BCA-AJC-DS-01",
+            "value": 5
+        },
+        {
             "source": "BCA-AJC-TC-08",
             "target": "BCA-AJC-DS-02",
             "value": 5
         },
         {
-            "source": "BCA-AJC-TC-06",
-            "target": "BCA-AJC-DS-03",
-            "value": 5
-        },
-        {
             "source": "BCA-AJC-TC-08",
             "target": "BCA-AJC-DS-03",
-            "value": 5
-        },
-        {
-            "source": "BCA-AJC-TC-06",
-            "target": "BCA-AJC-IR-01",
             "value": 5
         },
         {
@@ -255,23 +290,18 @@
             "value": 5
         },
         {
-            "source": "BCA-AJC-TC-06",
-            "target": "BCA-AJC-IR-02",
-            "value": 5
-        },
-        {
             "source": "BCA-AJC-TC-08",
             "target": "BCA-AJC-IR-02",
             "value": 5
         },
         {
-            "source": "BCA-AJC-TC-06",
+            "source": "BCA-AJC-TC-08",
             "target": "BCA-AJC-IR-03",
             "value": 5
         },
         {
             "source": "BCA-AJC-TC-08",
-            "target": "BCA-AJC-IR-03",
+            "target": "BCA-AJC-HI-01",
             "value": 5
         },
         {
@@ -282,21 +312,6 @@
         {
             "source": "BCA-AJC-MW-02",
             "target": "AJBCOPY",
-            "value": 5
-        },
-        {
-            "source": "BCA-AJC-TC-01",
-            "target": "BCA-AJC-HI-01",
-            "value": 5
-        },
-        {
-            "source": "BCA-AJC-TC-06",
-            "target": "BCA-AJC-HI-01",
-            "value": 5
-        },
-        {
-            "source": "BCA-AJC-TC-08",
-            "target": "BCA-AJC-HI-01",
             "value": 5
         },
         {
