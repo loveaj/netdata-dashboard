@@ -3,8 +3,9 @@ import { useSearchParams } from "react-router-dom";
 
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
-import DashboardCardLinuxUsedPercent from '../partials/dashboard/DashboardCardLinuxUsedPercent';
-
+import DashboardCardLinuxDiskUsedPercent from '../partials/dashboard/DashboardCardLinuxDiskUsedPercent';
+import DashboardCardLinuxCpuUtilisation from '../partials/dashboard/DashboardCardLinuxCpuUtilisation';
+import DashboardCardLinuxMemoryUtilisation from '../partials/dashboard/DashboardCardLinuxMemoryUtilisation';
 
 function ServerLinux() {
 
@@ -39,10 +40,12 @@ function ServerLinux() {
             {/* Cards */}
             <div className="grid grid-cols-12 gap-6">
               {/* Disk utilisation  */}
-              <DashboardCardLinuxUsedPercent />
-              {/* Memory system.ram */}
-              {/* Swappiness system.swap */}
+              <DashboardCardLinuxDiskUsedPercent />
               {/* CPU system.cpu */}
+              <DashboardCardLinuxCpuUtilisation />
+              {/* Memory system.ram */}
+              <DashboardCardLinuxMemoryUtilisation />
+              {/* Swappiness system.swap */}
               {/* I/O system.io */}
             </div>
  
