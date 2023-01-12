@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
+import DashboardCardLinuxDiskUsed from '../partials/dashboard/DashboardCardLinuxDiskUsed';
 import DashboardCardLinuxDiskUsedPercent from '../partials/dashboard/DashboardCardLinuxDiskUsedPercent';
 import DashboardCardLinuxCpuUtilisation from '../partials/dashboard/DashboardCardLinuxCpuUtilisation';
 import DashboardCardLinuxMemoryUtilisation from '../partials/dashboard/DashboardCardLinuxMemoryUtilisation';
@@ -41,6 +42,7 @@ function ServerLinux() {
             <div className="grid grid-cols-12 gap-6">
               {/* Disk utilisation  */}
               <DashboardCardLinuxDiskUsedPercent />
+              <DashboardCardLinuxDiskUsed />
               {/* CPU system.cpu */}
               <DashboardCardLinuxCpuUtilisation />
               {/* Memory system.ram */}

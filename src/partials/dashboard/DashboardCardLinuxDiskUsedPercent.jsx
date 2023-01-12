@@ -23,17 +23,15 @@ function DashboardCardLinuxDiskUsedPercent() {
       <div className="mt-2 mb-2 grow">
         <div data-netdata="disk_space._" 
               data-host={targetHostQuery}
-              data-chart-library="dygraph" 
-              data-dygraph-type="sparkline"
-              data-title="" 
-              data-width="95%"
-              data-height="260px"
-              data-after="-300"
-              data-append-options="match-ids"
-              data-dygraph-valuerange="[0, null]"
-              data-dygraph-strokewidth="1.5"
-              data-dimensions="avail,used"
-              data-colors="#bc5090 #ef5675"
+              data-chart-library="easypiechart" 
+              data-title="Used disk" 
+              data-units="%"
+              data-decimal-digits="0" 
+              data-width="250px"
+              data-height="250px"
+              data-easypiechart-barcolor="(function(percent){return(percent < 80 ? '#78be20' : percent < 90 ? '#e57200' : '#d50032');})"
+              data-easypiechart-min-value="0"
+              data-easypiechart-max-value="100"
         >
         </div>
       </div>
