@@ -23,6 +23,7 @@ function DashboardCardLinuxDiskUsedPercent() {
       <div className="mt-2 mb-2 grow">
         <div data-netdata="disk_space._" 
               data-host={targetHostQuery}
+              data-append-options="percentage"
               data-chart-library="easypiechart" 
               data-title="Used disk" 
               data-units="%"
@@ -32,6 +33,7 @@ function DashboardCardLinuxDiskUsedPercent() {
               data-easypiechart-barcolor="(function(percent){return(percent < 80 ? '#78be20' : percent < 90 ? '#e57200' : '#d50032');})"
               data-easypiechart-min-value="0"
               data-easypiechart-max-value="100"
+              data-dimensions="used"
         >
         </div>
       </div>
