@@ -7,7 +7,7 @@ function DashboardCardLinuxMemoryUtilisation() {
   const targetHostQuery = window.location.protocol + "//" + window.location.hostname + ":19999/host/" + searchParams.get("targetHost")
  
   return (
-    <div className="flex-initial w-64 bg-white border rounded-sm shadow-lg h-96 col-span-full sm:col-span-5 xl:col-span-4 border-slate-200">
+    <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">
       <div className="px-5 pt-5">
         <header className="flex items-start justify-between mb-2">
         </header>
@@ -20,7 +20,7 @@ function DashboardCardLinuxMemoryUtilisation() {
           {PLATFORM.environment}
         </div>        
       </div>
-      <div className="grow">
+      <div className="mt-2 mb-2 grow">
         <div data-netdata="system.ram" 
               data-host={targetHostQuery}
               data-chart-library="dygraph" 
