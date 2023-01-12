@@ -33,7 +33,7 @@
             "colour": "#ee0600",
             "scale": 4,
             "os": "Linux",
-            "dashlink": "/platform/serverlinux?targetHost=CA-AJC-TC-06"
+            "dashlink": "/platform/serverlinux?targetHost=BCA-AJC-TC-06"
         },
         {
             "id": "BCA-AJC-TC-08",
