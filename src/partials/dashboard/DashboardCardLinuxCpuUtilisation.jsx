@@ -4,8 +4,12 @@ import { useSearchParams } from "react-router-dom";
 function DashboardCardLinuxCpuUtilisation() {
 
   let [searchParams, setSearchParams] = useSearchParams()
-  const targetHostQuery = window.location.protocol + "//" + window.location.hostname + ":19999/host/" + searchParams.get("targetHost")
- 
+  const targetHost = searchParams.get("targetHost")
+  const collectorUrl = "http://localhost:19999/host/" + targetHost
+  const collectorHost = searchParams.get("collectorHost")
+  const targetData = "system.cpu"
+  const targetDataId = collectorHost + "_system_cpu"
+
   return (
     <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">
       <div className="px-5 pt-5">
@@ -21,8 +25,9 @@ function DashboardCardLinuxCpuUtilisation() {
         </div>        
       </div>
       <div className="mt-2 mb-2 grow">
-        <div data-netdata="system.cpu" 
-              data-host={targetHostQuery}
+        <div data-netdata={targetData} 
+              data-id={targetDataId}
+              data-host={collectorUrl}
               data-chart-library="dygraph" 
               data-dygraph-type="sparkline"
               data-title="" 

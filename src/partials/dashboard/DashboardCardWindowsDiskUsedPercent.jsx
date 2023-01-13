@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSearchParams } from "react-router-dom";
 
-function DashboardCardLinuxDiskUsedPercent() {
+function DashboardCardWindowsDiskUsedPercent() {
 
   let [searchParams, setSearchParams] = useSearchParams()
   const targetHost = searchParams.get("targetHost")
-  const collectorUrl = "http://localhost:19999/host/" + targetHost
+  const collectorUrl = "http://localhost:19999/"
   const collectorHost = searchParams.get("collectorHost")
-  const targetData = "disk_space._"
-  const targetDataId = collectorHost + "_disk_space__"
-
+  const targetData = "wmi_" + targetHost + ".logical_disk_C:_space_usage"
+  const targetDataId = collectorHost + "_wmi_" + targetHost + "_logical_disk_C:_space_usage"
+  
   return (
     <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">
       <div className="px-5 pt-5">
@@ -30,7 +30,7 @@ function DashboardCardLinuxDiskUsedPercent() {
               data-host={collectorUrl}
               data-append-options="percentage"
               data-chart-library="easypiechart" 
-              data-title="Used disk" 
+              data-title="Used disk C:" 
               data-units="%"
               data-decimal-digits="0" 
               data-width="250px"
@@ -45,4 +45,4 @@ function DashboardCardLinuxDiskUsedPercent() {
     </div>
   );
 }
-export default DashboardCardLinuxDiskUsedPercent;
+export default DashboardCardWindowsDiskUsedPercent;

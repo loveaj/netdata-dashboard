@@ -1,7 +1,14 @@
 import React  from 'react';
+import { useSearchParams } from "react-router-dom";
 
 function DashboardCardIbmiTempStorageUtilisation() {
 
+  let [searchParams, setSearchParams] = useSearchParams()
+  const targetHost = searchParams.get("targetHost")
+  const collectorUrl = "http://localhost:19999/"
+  const collectorHost = searchParams.get("collectorHost")
+  const targetData = "ibmi_remote.temp_storage_utilisation"
+  const targetDataId = collectorHost + "_ibmi_remote_temp_storage_utilisation"
  
   return (
     <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">
@@ -21,8 +28,9 @@ function DashboardCardIbmiTempStorageUtilisation() {
         </div>
       </div>
       <div className="mt-2 mb-2 grow">
-        <div data-netdata="ibmi_remote.temp_storage_utilisation" 
-              data-host="http://localhost:19999/"
+        <div data-netdata={targetData} 
+              data-id={targetDataId}
+              data-host={collectorUrl}
               data-chart-library="dygraph" 
               data-dygraph-type="sparkline"
               data-title="" 
