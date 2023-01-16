@@ -7,7 +7,10 @@ function DashboardCardWindowsMultiDiskUsedPercent() {
   const targetHost = searchParams.get("targetHost")
   const collectorUrl = "http://localhost:19999/"
   const collectorHost = searchParams.get("collectorHost")
-  const targetData = "wmi_" + targetHost + ".logical_disk_C:_space_usage"
+  const targetData1 = "wmi_" + targetHost + ".logical_disk_C:_space_usage"
+  const targetData2 = "wmi_" + targetHost + ".logical_disk_D:_space_usage"
+  const targetData3 = "wmi_" + targetHost + ".logical_disk_E:_space_usage"
+  const targetData4 = "wmi_" + targetHost + ".logical_disk_S:_space_usage"
   const targetDataId1 = collectorHost + "_wmi_" + targetHost + "_logical_disk_C:_space_usage"
   const targetDataId2 = collectorHost + "_wmi_" + targetHost + "_logical_disk_D:_space_usage"
   const targetDataId3 = collectorHost + "_wmi_" + targetHost + "_logical_disk_E:_space_usage"
@@ -28,7 +31,7 @@ function DashboardCardWindowsMultiDiskUsedPercent() {
         </div>        
       </div>
       <div className="mt-2 mb-2 grow">
-        <div data-netdata={targetData} 
+        <div data-netdata={targetData1} 
               data-id={targetDataId1}
               data-host={collectorUrl}
               data-append-options="percentage"
@@ -44,7 +47,7 @@ function DashboardCardWindowsMultiDiskUsedPercent() {
               data-dimensions="used"
         >
         </div>
-        <div data-netdata={targetData} 
+        <div data-netdata={targetData2} 
               data-id={targetDataId2}
               data-host={collectorUrl}
               data-append-options="percentage"
@@ -60,7 +63,7 @@ function DashboardCardWindowsMultiDiskUsedPercent() {
               data-dimensions="used"
         >
         </div>
-        <div data-netdata={targetData} 
+        <div data-netdata={targetData3} 
               data-id={targetDataId3}
               data-host={collectorUrl}
               data-append-options="percentage"
@@ -76,7 +79,7 @@ function DashboardCardWindowsMultiDiskUsedPercent() {
               data-dimensions="used"
         >
         </div>
-        <div data-netdata={targetData} 
+        <div data-netdata={targetData4} 
               data-id={targetDataId4}
               data-host={collectorUrl}
               data-append-options="percentage"
