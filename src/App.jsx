@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import ServerIbmi from './pages/ServerIbmi';
 import ServerLinux from './pages/ServerLinux';
 import ServerWindows from './pages/ServerWindows';
+import ServerWindowsLarge from './pages/ServerWindowsLarge';
 import Topology from './pages/Topology';
 
 
@@ -61,6 +62,7 @@ useEffect(() => {
         <Route path="/platform/ibmi" element={<ServerIbmi />} />
         <Route path="/platform/serverlinux" element={<ServerLinux />} />
         <Route path="/platform/serverwindows" element={<ServerWindows />} />
+        <Route path="/platform/serverwindowslarge" element={<ServerWindowsLarge />} />
       </Routes>
     </>
   );
