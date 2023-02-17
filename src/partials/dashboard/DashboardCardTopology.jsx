@@ -1,5 +1,6 @@
 import React,{useRef, useState, useEffect, useCallback} from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
+import SlidingPanel from '../SlidingPanel';
 
 
 function DashboardCardTopology() {
@@ -8,6 +9,23 @@ function DashboardCardTopology() {
   const [graphData, setGraphData] = useState({ nodes: [], links: [] });
   const [initialCentre, setInitialCentre] =useState(true);
   const forceRef = useRef();
+  const [openPanel, setOpenPanel] = useState(false);
+  const [selectedNodeId, setSelectedNodeId] = useState(false);
+  const [selectedNodeLabel, setSelectedNodeLabel] = useState(false);
+  const [collectorHost, setCollectorHost] = useState(false);
+  const [targetHost, setTargetHost] = useState(false);
+
+  const handleOpenPanel = (id, label, collectorhost, targethost) => {
+    setSelectedNodeId(id);
+    setSelectedNodeLabel(label);
+    setCollectorHost(collectorhost);
+    setTargetHost(targethost);
+    setOpenPanel(true);
+  };
+
+  const handleClosePanel = () => {
+    setOpenPanel(false);
+  };
 
   // Read in topology data
   useEffect(() => {
@@ -28,7 +46,7 @@ function DashboardCardTopology() {
   // Draw the node
   const paintNode = useCallback((node, ctx, globalScale) => {
     const nodeid = node.id;
-    const nodelabel = node.description;
+    const nodelabel = node.label;
     const fontSize = 10/globalScale;
     const lineHeight = fontSize * 1.2;
     ctx.font = `bold ${fontSize}px Sans-Serif`;  
@@ -51,16 +69,13 @@ function DashboardCardTopology() {
 
   // Return the force node graph
   return (
-    <div className="flex-initial bg-white border rounded-sm shadow-lg border-slate-200">
-      <div className="px-5 pt-5">
-        <h2 className="mb-2 text-lg font-semibold text-slate-800">UAT</h2>
-      </div>
+    <div className="flex-initial bg-white">
       <div className="place-content-center">
         <ForceGraph2D
           graphData={graphData}
           backgroundColor="white"
           width={window.innerWidth*0.6}
-          height={800}
+          height={window.innerHeight*0.7}
           ref={forceRef}
           cooldownTicks={50}
           nodeRelSize={3}
@@ -79,7 +94,7 @@ function DashboardCardTopology() {
           nodeCanvasObjectMode={() => "after"}
           nodeCanvasObject={paintNode}
           nodeLabel={node => `${node.label}`}
-          onNodeClick={node => window.location.replace(`${node.dashlink}`)}
+          onNodeClick={node => handleOpenPanel(`${node.id}`, `${node.label}`)}
           onNodeDragEnd={node => {
             node.fx = node.x;
             node.fy = node.y;
@@ -87,6 +102,10 @@ function DashboardCardTopology() {
           }}
         />
       </div>
+      <div>
+        <SlidingPanel openPanel={openPanel} setOpenPanel={setOpenPanel} close={handleClosePanel} nodeId={selectedNodeId} nodeLabel={selectedNodeLabel}/>
+      </div>
+
     </div>
   );
 }

@@ -2,12 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 import SidebarLinkGroup from './SidebarLinkGroup';
+import { ServerStackIcon, BoltIcon, SquaresPlusIcon } from '@heroicons/react/24/outline'
 import CompanyLogo from '../images/logo_ajbell_white.svg';
-import MenuIconInfra from '../images/microchip-dark.svg';
-import MenuIconActivity from '../images/compass-dark.svg';
-import MenuIconMore from '../images/share-nodes-dark.svg';
-
-
 
 function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const location = useLocation();
@@ -92,7 +88,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
         <div className="space-y-8">
           {/* Pages group */}
           <div>
-            <h3 className="pl-3 text-xs font-semibold text-gray-500 uppercase">
+            <h3 className="pl-3 text-sm font-semibold text-white uppercase">
               <span className="hidden w-6 text-center text-gray-900 lg:block lg:sidebar-expanded:hidden 2xl:hidden" aria-hidden="true">
                 •
               </span>
@@ -107,8 +103,8 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                     <React.Fragment>
                       <a
                         href="#0"
-                        className={`block text-gray-200 hover:text-white truncate transition duration-150 ${
-                          (pathname === '/' || pathname.includes('platform')) && 'hover:text-gray-200'
+                        className={`block text-white hover:text-red-300 truncate transition duration-150 ${
+                          (pathname === '/' || pathname.includes('platform')) && 'hover:text-red-300'
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
@@ -117,7 +113,8 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
-                            <img className="w-8 h-8 bg-gray-900 rounded-full" src={MenuIconInfra} width="32" height="32" alt="Infrastructure" />
+
+                            <ServerStackIcon className="bg-gray-900 rounded-full" width="32" height="32" alt="Infrastructure" />
                             <span className="ml-2 text-sm font-bold duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                               Infrastructure
                             </span>
@@ -137,10 +134,10 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                               reloadDocument
                               end
                               to="/"
-                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
+                              className="block text-white truncate transition duration-150 hover:text-red-300"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
-                                Topology
+                                Service map
                               </span>
                             </NavLink>
                           </li>                          
@@ -149,7 +146,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                               reloadDocument
                               end
                               to="/platform/ibmi?targetHost=AJBCOPY"
-                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
+                              className="block text-white truncate transition duration-150 hover:text-red-300"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 IBM i
@@ -161,7 +158,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                               reloadDocument
                               end
                               to="/platform/serverlinux?targetHost=localhost"
-                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
+                              className="block text-white truncate transition duration-150 hover:text-red-300"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 Linux servers
@@ -173,7 +170,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                               reloadDocument
                               end
                               to="/platform/example"
-                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
+                              className="block text-white truncate transition duration-150 hover:text-red-300"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 Windows servers
@@ -194,17 +191,17 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                     <React.Fragment>
                       <a
                         href="#0"
-                        className={`block text-gray-200 hover:text-white truncate transition duration-150 ${
+                        className={`block text-gray-300 hover:text-white truncate transition duration-150 ${
                           pathname.includes('activity') && 'hover:text-gray-200'
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
-                          sidebarExpanded ? handleClick() : setSidebarExpanded(true);
+                          sidebarExpanded ? handleClick() : setSidebarExpanded(false);
                         }}
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
-                            <img className="w-8 h-8 bg-gray-900 rounded-full" src={MenuIconActivity} width="32" height="32" alt="Activity" />
+                            <BoltIcon className="bg-gray-900 rounded-full" width="32" height="32" alt="Activity" />
                             <span className="ml-2 text-sm font-bold duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                               Business Activity
                             </span>
@@ -292,12 +289,12 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   reloadDocument
                   end
                   to="/"
-                  className={`block text-gray-200 hover:text-white truncate transition duration-150 ${
+                  className={`block text-gray-300 hover:text-white truncate transition duration-150 ${
                     pathname.includes('more') && 'hover:text-gray-200'
                   }`}
                 >
                   <div className="flex items-center">
-                    <img className="w-8 h-8 bg-gray-900 rounded-full" src={MenuIconMore} width="32" height="32" alt="More" />
+                    <SquaresPlusIcon className="bg-gray-900 rounded-full" width="32" height="32" alt="More" />
                     <span className="ml-2 text-sm font-bold duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">More ...</span>
                   </div>
                 </NavLink>
