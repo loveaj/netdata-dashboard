@@ -94,7 +94,7 @@ function DashboardCardTopology() {
           nodeCanvasObjectMode={() => "after"}
           nodeCanvasObject={paintNode}
           nodeLabel={node => `${node.label}`}
-          onNodeClick={node => handleOpenPanel(`${node.id}`, `${node.label}`)}
+          onNodeClick={node => handleOpenPanel(`${node.id}`, `${node.label}`, `${node.collectorhost}`, `${node.targethost}`)}
           onNodeDragEnd={node => {
             node.fx = node.x;
             node.fy = node.y;
@@ -103,7 +103,7 @@ function DashboardCardTopology() {
         />
       </div>
       <div>
-        <SlidingPanel openPanel={openPanel} setOpenPanel={setOpenPanel} close={handleClosePanel} nodeId={selectedNodeId} nodeLabel={selectedNodeLabel}/>
+        <SlidingPanel openPanel={openPanel} setOpenPanel={setOpenPanel} close={handleClosePanel} nodeId={selectedNodeId} nodeLabel={selectedNodeLabel} collectorHost={collectorHost} targetHost={targetHost}/>
       </div>
 
     </div>
