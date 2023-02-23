@@ -16,16 +16,16 @@ function DashboardCardTopology() {
 
 
   const handleOpenPanel = (id, label, collectorhost, targethost) => {
-//    NETDATA.pause(function() {
+    NETDATA.pause(function() {
       // ok, it is paused  
       setSelectedNodeId(id);
       setSelectedNodeLabel(label);
       setCollectorHost(collectorhost);
       setTargetHost(targethost);     
       // and then call this to let the charts refresh:
-  //    NETDATA.unpause();
-      setOpenPanel(true); 
-  //   });
+      NETDATA.unpause();
+     });
+     setOpenPanel(true); 
   };
 
   const handleClosePanel = () => {
