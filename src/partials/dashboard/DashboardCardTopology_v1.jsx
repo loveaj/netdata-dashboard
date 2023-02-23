@@ -16,16 +16,11 @@ function DashboardCardTopology() {
 
 
   const handleOpenPanel = (id, label, collectorhost, targethost) => {
-//    NETDATA.pause(function() {
-      // ok, it is paused  
-      setSelectedNodeId(id);
-      setSelectedNodeLabel(label);
-      setCollectorHost(collectorhost);
-      setTargetHost(targethost);     
-      // and then call this to let the charts refresh:
-  //    NETDATA.unpause();
-      setOpenPanel(true); 
-  //   });
+    setSelectedNodeId(id);
+    setSelectedNodeLabel(label);
+    setCollectorHost(collectorhost);
+    setTargetHost(targethost);
+    setOpenPanel(true);
   };
 
   const handleClosePanel = () => {
@@ -47,6 +42,7 @@ function DashboardCardTopology() {
     forceRef.current.d3Force("link").distance(100);
     forceRef.current.d3Force("charge").distanceMax(100);
   }, []);
+
 
 
   // Draw the node

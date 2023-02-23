@@ -1,11 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script>
         var netdataNoBootstrap = true;
         var netdataDontStart = true;
@@ -20,11 +21,11 @@
         // --- OPTIONS FOR THE CHARTS --
 
         // Debug
-        NETDATA.options.debug.main_loop = false;
+        NETDATA.options.debug.main_loop = true;
 
         // destroy charts not shown (lowers memory on the browsers)
         // set this to 'true' to destroy, 'false' to hide the charts
-        NETDATA.options.current.destroy_on_hide = false;
+        // NETDATA.options.current.destroy_on_hide = false;
 
         // set this to false, to always show all dimensions
         NETDATA.options.current.eliminate_zero_dimensions = true;
@@ -44,6 +45,10 @@
 
         // do not to give errors on netdata demo servers for 60 seconds
         NETDATA.options.current.retries_on_data_failures = 60;
+
+        // enable or disable visibility management
+        NETDATA.options.current.update_only_visible = false;
+
     </script>
 
     <title>Trading Platform Dashboard</title>

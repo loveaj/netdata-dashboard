@@ -14,8 +14,7 @@ function MiniCardIbmiAspUsedPercent({ collectorHost, targetHost }) {
         <h2 className="mb-2 text-sm font-semibold text-slate-800">ASP Utilisation</h2>
       </div>
       <div className="ml-15 grow">
-        <div data-netdata={targetData} 
-              data-id={targetDataId}   
+        <div data-netdata={targetData}  
               data-host={collectorUrl}
               data-chart-library="easypiechart"
               data-title="Used ASP"
