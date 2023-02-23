@@ -2,7 +2,8 @@ import React from 'react';
 
 function MiniCardIbmiAspUsedPercent({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://" + collectorHost + ":19999/"
+  //const collectorUrl = "http://" + collectorHost + ":19999/"
+  const collectorUrl = "http://localhost:19999/"
   const targetData = "ibmi_remote.asp_used_percent"
   const targetDataId = collectorHost + "_ibmi_remote_asp_used_percent"
 
