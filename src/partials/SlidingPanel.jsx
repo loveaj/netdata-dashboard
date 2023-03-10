@@ -1,9 +1,13 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import MiniCardIbmiAspUsedPercent from './dashboard/MiniCardIbmiAspUsedPercent';
+import MiniCardOS400 from './cards/MiniCardOS400';
+import MiniCardLINUX from './cards/MiniCardLINUX';
+import MiniCardWINDOWS from './cards/MiniCardWINDOWS';
 
-function SlidingPanel({ openPanel, setOpenPanel, close, nodeId, nodeLabel, collectorHost, targetHost }) {
+function SlidingPanel({ openPanel, setOpenPanel, close, nodeId, nodeLabel, nodeOs, collectorHost, targetHost }) {
+
+  const DynamicComponent = (nodeOs === 'OS400') ? MiniCardOS400 : (nodeOs === 'LINUX') ? MiniCardLINUX: MiniCardWINDOWS;
 
   return (
     <Transition.Root show={openPanel} as={Fragment}>
@@ -48,6 +52,11 @@ function SlidingPanel({ openPanel, setOpenPanel, close, nodeId, nodeLabel, colle
                         </div>
                         <div className="mt-1">
                           <p className="text-xs text-gray-700">
+                            OS: {nodeOs}
+                          </p>
+                        </div>
+                        <div className="mt-1">
+                          <p className="text-xs text-gray-700">
                             Type: {nodeLabel}
                           </p>
                         </div>
@@ -61,10 +70,7 @@ function SlidingPanel({ openPanel, setOpenPanel, close, nodeId, nodeLabel, colle
                       </div>
 
                       <div className="relative flex-1 px-4 sm:px-6">
-                        {/* Replace with your content */}
-                          {/* Gauge chart (ASP utilisation %) */}
-                          <MiniCardIbmiAspUsedPercent collectorHost={collectorHost} targetHost={targetHost} />
-                        {/* /End replace */}
+                        <DynamicComponent collectorHost={collectorHost} targetHost={targetHost} />
                       </div>
                     </div>
                     <div className="flex flex-shrink-0 justify-end px-4 py-4">

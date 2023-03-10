@@ -1,8 +1,9 @@
 import React from 'react';
 
-function MiniCardIbmiAspUsedPercent({ collectorHost, targetHost }) {
+function MiniCardOS400DiskUsedPercent({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://" + collectorHost + ":19999/"
+  //const collectorUrl = "http://" + collectorHost + ":19999/"
+  const collectorUrl = "http://localhost:19999/"
   const targetData = "ibmi_remote.asp_used_percent"
   const targetDataId = collectorHost + "_ibmi_remote_asp_used_percent"
 
@@ -20,8 +21,8 @@ function MiniCardIbmiAspUsedPercent({ collectorHost, targetHost }) {
               data-title="Used ASP"
               data-units="%"
               data-decimal-digits="0"
-              data-width="250px"
-              data-height="250px"
+              data-width="150px"
+              data-height="150px"
               data-easypiechart-barcolor="(function(percent){return(percent < 80 ? '#78be20' : percent < 90 ? '#e57200' : '#d50032');})"
               data-easypiechart-min-value="0"
               data-easypiechart-max-value="100"
@@ -32,4 +33,4 @@ function MiniCardIbmiAspUsedPercent({ collectorHost, targetHost }) {
   );
 
 }
-export default MiniCardIbmiAspUsedPercent;
+export default MiniCardOS400DiskUsedPercent;

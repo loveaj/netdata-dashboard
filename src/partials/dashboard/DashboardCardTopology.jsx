@@ -11,15 +11,17 @@ function DashboardCardTopology() {
   const [openPanel, setOpenPanel] = useState(false);
   const [selectedNodeId, setSelectedNodeId] = useState(false);
   const [selectedNodeLabel, setSelectedNodeLabel] = useState(false);
+  const [selectedNodeOs, setSelectedNodeOs] = useState(false);
   const [collectorHost, setCollectorHost] = useState(false);
   const [targetHost, setTargetHost] = useState(false);
 
 
-  const handleOpenPanel = (id, label, collectorhost, targethost) => {
+  const handleOpenPanel = (id, label, os, collectorhost, targethost) => {
     NETDATA.pause(function() {
       // ok, it is paused  
       setSelectedNodeId(id);
       setSelectedNodeLabel(label);
+      setSelectedNodeOs(os.toUpperCase());
       setCollectorHost(collectorhost);
       setTargetHost(targethost);     
       // and then call this to let the charts refresh:
@@ -52,9 +54,7 @@ function DashboardCardTopology() {
   // Draw the node
   const paintNode = useCallback((node, ctx, globalScale) => {
     const nodeid = node.id;
-    const nodelabel = node.label;
     const fontSize = 10/globalScale;
-    const lineHeight = fontSize * 1.2;
     ctx.font = `bold ${fontSize}px Sans-Serif`;  
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -100,7 +100,8 @@ function DashboardCardTopology() {
           nodeCanvasObjectMode={() => "after"}
           nodeCanvasObject={paintNode}
           nodeLabel={node => `${node.label}`}
-          onNodeClick={node => handleOpenPanel(`${node.id}`, `${node.label}`, `${node.collectorhost}`, `${node.targethost}`)}
+          nodeOs={node => `${node.os}`}
+          onNodeClick={node => handleOpenPanel(`${node.id}`, `${node.label}`, `${node.os}`, `${node.collectorhost}`, `${node.targethost}`)}
           onNodeDragEnd={node => {
             node.fx = node.x;
             node.fy = node.y;
@@ -109,7 +110,7 @@ function DashboardCardTopology() {
         />
       </div>
       <div>
-        <SlidingPanel openPanel={openPanel} setOpenPanel={setOpenPanel} close={handleClosePanel} nodeId={selectedNodeId} nodeLabel={selectedNodeLabel} collectorHost={collectorHost} targetHost={targetHost}/>
+        <SlidingPanel openPanel={openPanel} setOpenPanel={setOpenPanel} close={handleClosePanel} nodeId={selectedNodeId} nodeLabel={selectedNodeLabel} nodeOs={selectedNodeOs} collectorHost={collectorHost} targetHost={targetHost}/>
       </div>
 
     </div>
