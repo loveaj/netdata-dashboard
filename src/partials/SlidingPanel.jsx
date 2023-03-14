@@ -5,18 +5,18 @@ import MiniCardOS400 from './cards/MiniCardOS400';
 import MiniCardLINUX from './cards/MiniCardLINUX';
 import MiniCardWINDOWS from './cards/MiniCardWINDOWS';
 
-function SlidingPanel({ openPanel, setOpenPanel, close, nodeId, nodeLabel, nodeOs, collectorHost, targetHost }) {
+function SlidingPanel({ openPanel, setOpenPanel, closePanel, nodeId, nodeLabel, nodeOs, collectorHost, targetHost }) {
 
   const DynamicComponent = (nodeOs === 'OS400') ? MiniCardOS400 : (nodeOs === 'LINUX') ? MiniCardLINUX: MiniCardWINDOWS;
   
   return (
     <Transition.Root show={openPanel} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={setOpenPanel}>
+      <Dialog as="div" className="relative z-10" onClose={closePanel}>
         <div className="fixed inset-0" />
 
         <div className="fixed inset-0 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
-            <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+            <div className="fixed inset-y-0 right-0 flex max-w-full pl-10 pointer-events-none">
               <Transition.Child
                 as={Fragment}
                 unmount={false}
@@ -27,21 +27,21 @@ function SlidingPanel({ openPanel, setOpenPanel, close, nodeId, nodeLabel, nodeO
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                  <div className="flex h-full flex-col divide-y divide-gray-200 bg-white shadow-gray-500 shadow-xl">
-                    <div className="flex min-h-0 flex-1 flex-col overflow-y-scroll py-6">
+                <Dialog.Panel className="w-screen max-w-md pointer-events-auto">
+                  <div className="flex flex-col h-full bg-white divide-y divide-gray-200 shadow-xl shadow-gray-500">
+                    <div className="flex flex-col flex-1 min-h-0 py-6 overflow-y-scroll">
 
-                      <div className="bg-gray-200 mt-6 py-6 px-4 sm:px-6">
+                      <div className="px-4 py-6 mt-6 bg-gray-200 sm:px-6">
                         <div className="flex items-center justify-between">
                           <Dialog.Title className="text-base font-bold text-black">Service details</Dialog.Title>
-                          <div className="ml-3 flex h-7 items-center">
+                          <div className="flex items-center ml-3 h-7">
                             <button
                               type="button"
-                              className="rounded-md bg-gray-200 text-black hover:text-red-900 focus:outline-none focus:ring-2 focus:ring-red-900"
-                              onClick={() => setOpenPanel(false)}
+                              className="text-black bg-gray-200 rounded-md hover:text-red-900 focus:outline-none focus:ring-2 focus:ring-red-900"
+                              onClick={() => closePanel()}
                             >
                               <span className="sr-only">Close panel</span>
-                              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                              <XMarkIcon className="w-6 h-6" aria-hidden="true" />
                             </button>
                           </div>
                         </div>
@@ -73,10 +73,10 @@ function SlidingPanel({ openPanel, setOpenPanel, close, nodeId, nodeLabel, nodeO
                         <DynamicComponent collectorHost={collectorHost} targetHost={targetHost} />
                       </div>
                     </div>
-                    <div className="flex flex-shrink-0 justify-end px-4 py-4">
+                    <div className="flex justify-end flex-shrink-0 px-4 py-4">
                       <button
                         type="button"
-                        className="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         onClick={() => setOpenPanel(false)}
                       >
                         Expand

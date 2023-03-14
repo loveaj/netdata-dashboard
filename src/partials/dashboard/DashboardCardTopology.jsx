@@ -28,23 +28,19 @@ function DashboardCardTopology() {
 
   const handleClosePanel = () => {
     NETDATA.pause(function() {
-      setSelectedNodeId(false);
-      setSelectedNodeLabel(false);
-      setSelectedNodeOs(false);
-      setCollectorHost(false);
       setTargetHost(false);  
      });
   };
 
+  // Detect side panel open/close interaction
   useEffect(() => {
     console.log("DashboardCardTopology os=" + selectedNodeOs);
-    NETDATA.unpause();
-    if ( selectedNodeOs === false ) {
+    if ( targetHost === false ) {
       setOpenPanel(false);
     } else {
       setOpenPanel(true);
     }
-    
+    NETDATA.unpause();
   }, [ selectedNodeId, selectedNodeLabel, selectedNodeOs, collectorHost, targetHost ]); 
 
   // Read in topology data
@@ -124,7 +120,7 @@ function DashboardCardTopology() {
         />
       </div>
       <div>
-        <SlidingPanel openPanel={openPanel} setOpenPanel={setOpenPanel} close={handleClosePanel} nodeId={selectedNodeId} nodeLabel={selectedNodeLabel} nodeOs={selectedNodeOs} collectorHost={collectorHost} targetHost={targetHost}/>
+        <SlidingPanel openPanel={openPanel} setOpenPanel={setOpenPanel} closePanel={handleClosePanel} nodeId={selectedNodeId} nodeLabel={selectedNodeLabel} nodeOs={selectedNodeOs} collectorHost={collectorHost} targetHost={targetHost}/>
       </div>
 
     </div>
