@@ -3,7 +3,7 @@ import React from 'react';
 function MiniCardLINUXDiskUsedPercent( { collectorHost, targetHost } ) {
 
   //const collectorUrl = "http://" + collectorHost + ":19999/"
-  const collectorUrl = "http://localhost:19999/"
+  const collectorUrl = "http://localhost:19999/host/" + targetHost
   const targetData = "disk_space._"
   const targetDataId = collectorHost + "_disk_space__"
 
@@ -12,9 +12,9 @@ function MiniCardLINUXDiskUsedPercent( { collectorHost, targetHost } ) {
       <div className="pt-5">
         <header className="flex items-start justify-between mb-2">
         </header> 
-        <h2 className="mb-2 text-lg font-semibold text-slate-800">Disk Utilisation</h2>      
+        <h2 className="mb-2 text-sm font-semibold text-slate-800">Disk Utilisation</h2>      
       </div>
-      <div className="mt-2 mb-2 grow">
+      <div className="ml-15 grow">
         <div data-netdata={targetData} 
               data-id={targetDataId}
               data-host={collectorUrl}
@@ -23,8 +23,8 @@ function MiniCardLINUXDiskUsedPercent( { collectorHost, targetHost } ) {
               data-title="Used disk" 
               data-units="%"
               data-decimal-digits="0" 
-              data-width="250px"
-              data-height="250px"
+              data-width="150px"
+              data-height="150px"
               data-easypiechart-barcolor="(function(percent){return(percent < 80 ? '#78be20' : percent < 90 ? '#e57200' : '#d50032');})"
               data-easypiechart-min-value="0"
               data-easypiechart-max-value="100"

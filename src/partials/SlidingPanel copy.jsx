@@ -8,7 +8,10 @@ import MiniCardWINDOWS from './cards/MiniCardWINDOWS';
 function SlidingPanel({ openPanel, setOpenPanel, close, nodeId, nodeLabel, nodeOs, collectorHost, targetHost }) {
 
   const DynamicComponent = (nodeOs === 'OS400') ? MiniCardOS400 : (nodeOs === 'LINUX') ? MiniCardLINUX: MiniCardWINDOWS;
-  
+
+  console.log("SlidingPanel collectorHost=" + collectorHost);
+  console.log("SlidingPanel targetHost=" + targetHost);
+
   return (
     <Transition.Root show={openPanel} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpenPanel}>

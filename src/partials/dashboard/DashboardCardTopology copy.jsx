@@ -22,30 +22,15 @@ function DashboardCardTopology() {
       setSelectedNodeLabel(label);
       setSelectedNodeOs(os.toUpperCase());
       setCollectorHost(collectorhost);
-      setTargetHost(targethost);  
-     });    
+      setTargetHost(targethost);     
+      NETDATA.unpause();
+     });
+     setOpenPanel(true); 
   };
 
   const handleClosePanel = () => {
-    NETDATA.pause(function() {
-      setSelectedNodeId(false);
-      setSelectedNodeLabel(false);
-      setSelectedNodeOs(false);
-      setCollectorHost(false);
-      setTargetHost(false);  
-     });
+    setOpenPanel(false);
   };
-
-  useEffect(() => {
-    console.log("DashboardCardTopology os=" + selectedNodeOs);
-    NETDATA.unpause();
-    if ( selectedNodeOs === false ) {
-      setOpenPanel(false);
-    } else {
-      setOpenPanel(true);
-    }
-    
-  }, [ selectedNodeId, selectedNodeLabel, selectedNodeOs, collectorHost, targetHost ]); 
 
   // Read in topology data
   useEffect(() => {
@@ -62,7 +47,6 @@ function DashboardCardTopology() {
     forceRef.current.d3Force("link").distance(100);
     forceRef.current.d3Force("charge").distanceMax(100);
   }, []);
-
 
 
   // Draw the node
