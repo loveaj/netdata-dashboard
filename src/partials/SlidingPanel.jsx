@@ -69,7 +69,7 @@ function SlidingPanel({ openPanel, setOpenPanel, closePanel, nodeId, nodeLabel, 
                         </div>
                       </div>
 
-                      <div className="relative flex-1 px-4 sm:px-6">
+                      <div className="px-4 sm:px-6">
                         <DynamicComponent collectorHost={collectorHost} targetHost={targetHost} />
                       </div>
                     </div>
