@@ -12,7 +12,7 @@ function MiniCardLINUXMemoryUtilisation( { collectorHost, targetHost } ) {
       <div className="pt-5 border-b-2 grow">
         <h2 className="mb-2 text-sm font-semibold text-slate-800">RAM Utilisation</h2>
       </div>  
-      <div className="flex">
+      <div className="flex pb-5">
         <div className="pt-3 grow">
           <div data-netdata={targetData} 
                 data-id={targetDataId}
