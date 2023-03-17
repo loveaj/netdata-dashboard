@@ -1,18 +1,18 @@
 import React from 'react';
 
-function MiniCardLINUXCpuUtilisation( { collectorHost, targetHost } ) {
+function MiniCardLINUXMemoryUtilisation( { collectorHost, targetHost } ) {
 
   //const collectorUrl = "http://" + collectorHost + ":19999/"
   const collectorUrl = "http://localhost:19999/host/" + targetHost
-  const targetData = "system.cpu"
+  const targetData = "system.ram"
   const targetDataId = collectorHost + "_system_cpu"
 
   return (
     <React.Fragment>
       <div className="pt-5 border-b-2 grow">
-        <h2 className="mb-2 text-sm font-semibold text-slate-800">CPU Utilisation</h2>
+        <h2 className="mb-2 text-sm font-semibold text-slate-800">RAM Utilisation</h2>
       </div>  
-      <div className="flex pb-10">
+      <div className="flex">
         <div className="pt-3 grow">
           <div data-netdata={targetData} 
                 data-id={targetDataId}
@@ -25,8 +25,8 @@ function MiniCardLINUXCpuUtilisation( { collectorHost, targetHost } ) {
                 data-append-options="match-ids"
                 data-dygraph-valuerange="[0, null]"
                 data-dygraph-strokewidth="1.5"
-                data-dimensions="user,system"
-                data-colors="#ef5675 #ffa600" 
+                data-dimensions="free,used,cached,buffers"
+                data-colors="#ef5675 #ffa600 #7a5195 #4daf4a" 
                 data-legend="yes"  
                 data-decimal-digits="-1"   
             >
@@ -36,4 +36,4 @@ function MiniCardLINUXCpuUtilisation( { collectorHost, targetHost } ) {
     </React.Fragment>
   );
 }
-export default MiniCardLINUXCpuUtilisation;
+export default MiniCardLINUXMemoryUtilisation;

@@ -12,7 +12,7 @@ function MiniCardLINUXDiskUsedPercent( { collectorHost, targetHost } ) {
       <div className="pt-5 border-b-2 grow">
         <h2 className="mb-2 text-sm font-semibold text-slate-800">Disk Utilisation</h2>
       </div>  
-      <div className="flex">
+      <div className="flex pb-5">
         <div className="text-white grow">
           .
         </div>
