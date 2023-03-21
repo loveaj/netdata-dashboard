@@ -23,5 +23,8 @@ export default defineConfig({
         commonjsOptions: {
             transformMixedEsModules: true,
         }
+    },
+    server: {
+        hmr: true,
     }
 })

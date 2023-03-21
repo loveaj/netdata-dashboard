@@ -27,7 +27,7 @@ function SlidingPanel({ openPanel, setOpenPanel, closePanel, nodeId, nodeLabel, 
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <Dialog.Panel className="w-screen max-w-md pointer-events-auto">
+                <Dialog.Panel className="w-screen max-w-2xl pointer-events-auto">
                   <div className="flex flex-col h-full bg-white divide-y divide-gray-200 shadow-xl shadow-gray-500">
                     <div className="flex flex-col flex-1 min-h-0 py-6 overflow-y-scroll">
 
@@ -76,7 +76,7 @@ function SlidingPanel({ openPanel, setOpenPanel, closePanel, nodeId, nodeLabel, 
                     <div className="flex justify-end flex-shrink-0 px-4 py-4">
                       <button
                         type="button"
-                        className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="px-4 py-2 text-sm font-medium text-gray-300 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         onClick={() => setOpenPanel(false)}
                       >
                         Expand

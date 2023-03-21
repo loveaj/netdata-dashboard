@@ -17,16 +17,14 @@ function MiniCardLINUXCpuUtilisation( { collectorHost, targetHost } ) {
           <div data-netdata={targetData} 
                 data-id={targetDataId}
                 data-host={collectorUrl}
-                data-chart-library="dygraph" 
+                data-chart-library="google" 
                 data-title="" 
                 data-width="100%"
                 data-height="150px"
                 data-after="-120"
                 data-append-options="match-ids"
-                data-dygraph-valuerange="[0, null]"
-                data-dygraph-strokewidth="1.5"
                 data-dimensions="user,system"
-                data-colors="#ef5675 #ffa600" 
+                data-colors="#5c64b0 #5dc0bd"
                 data-legend="yes"  
                 data-decimal-digits="-1"   
             >
