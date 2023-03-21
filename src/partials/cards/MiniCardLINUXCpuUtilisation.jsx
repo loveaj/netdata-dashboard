@@ -18,9 +18,9 @@ function MiniCardLINUXCpuUtilisation( { collectorHost, targetHost } ) {
                 data-id={targetDataId}
                 data-host={collectorUrl}
                 data-chart-library="dygraph" 
-                data-dygraph-type="sparkline"
                 data-dygraph-strokewidth="1.5"
                 data-dygraph-valuerange="[0, null]"
+                data-dygraph-fillalpha="0.1" 
                 data-title="" 
                 data-width="100%"
                 data-height="150px"
