@@ -17,14 +17,15 @@ function MiniCardOS400MemoryActiveToIneligible( { collectorHost, targetHost } ) 
           <div data-netdata={targetData} 
                 data-id={targetDataId}
                 data-host={collectorUrl}
-                data-chart-library="google" 
+                data-chart-library="dygraph" 
+                data-dygraph-type="sparkline"
+                data-dygraph-strokewidth="1.5"
+                data-dygraph-valuerange="[0, null]"
                 data-title="" 
                 data-width="95%"
                 data-height="260px"
                 data-after="-300"
                 data-append-options="match-ids"
-                data-dygraph-valuerange="[0, null]"
-                data-dygraph-strokewidth="1.5"
                 data-colors="#5c64b0 #1e88c5 #11a6c6 #5dc0bd"
           >
           </div>

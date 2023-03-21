@@ -17,7 +17,10 @@ function MiniCardWINDOWSCpuUtilisation( { collectorHost, targetHost } ) {
           <div data-netdata={targetData} 
                 data-id={targetDataId}
                 data-host={collectorUrl}
-                data-chart-library="google" 
+                data-chart-library="dygraph" 
+                data-dygraph-type="sparkline"
+                data-dygraph-strokewidth="1.5"
+                data-dygraph-valuerange="[0, null]"
                 data-title="" 
                 data-width="100%"
                 data-height="150px"
