@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -12,3 +11,29 @@
 @import 'additional-styles/theme.css';
 
 @import 'tailwindcss/utilities';
+
+/* Fonts */
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto-regular.woff2?#iefix') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto-bold.woff2?#iefix') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto-italic.woff2?#iefix') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto-light.woff2?#iefix') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
