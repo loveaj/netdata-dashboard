@@ -38,7 +38,8 @@ function DashboardCardLinuxCpuUtilisation() {
               data-dygraph-valuerange="[0, null]"
               data-dygraph-strokewidth="1.5"
               data-dimensions="user,system"
-              data-colors="#ef5675 #ffa600"        >
+              data-colors="#5c64b0 #5dc0bd"        
+          >
         </div>
       </div>
     </div>
