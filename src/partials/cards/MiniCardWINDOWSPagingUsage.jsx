@@ -29,7 +29,7 @@ function MiniCardWINDOWSPagingUsage( { collectorHost, targetHost } ) {
                 data-dimensions="free,used"
                 data-desired-units="Mb"
                 data-units="Mb"                
-                data-colors="#256BD1 #B21C87"
+                data-colors="#256BD1 #B21C87 #F5D88E #56A7C7 #4FB776"
                 data-legend="yes"  
                 data-decimal-digits="-1"   
             >

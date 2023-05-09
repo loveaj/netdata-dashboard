@@ -26,7 +26,7 @@ function MiniCardOS400MemoryActiveToIneligible( { collectorHost, targetHost } ) 
                 data-height="260px"
                 data-after="-300"
                 data-append-options="match-ids"
-                data-colors="#256BD1 #B21C87 #F5D88E"
+                data-colors="#256BD1 #B21C87 #F5D88E #56A7C7 #4FB776"
           >
           </div>
         </div>
