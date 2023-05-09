@@ -8,7 +8,6 @@ import {
 import './css/style.css';
 
 // Import pages
-import Dashboard from './pages/Dashboard';
 import ServerIbmi from './pages/ServerIbmi';
 import ServerLinux from './pages/ServerLinux';
 import ServerWindows from './pages/ServerWindows';
@@ -58,7 +57,6 @@ useEffect(() => {
     <>
       <Routes>
         <Route exact path="/" element={<Topology />} />
-        <Route exact path="/platform/example" element={<Dashboard />} />
         <Route path="/platform/ibmi" element={<ServerIbmi />} />
         <Route path="/platform/serverlinux" element={<ServerLinux />} />
         <Route path="/platform/serverwindows" element={<ServerWindows />} />
