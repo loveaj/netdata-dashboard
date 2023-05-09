@@ -27,7 +27,7 @@ function MiniCardWINDOWSCpuUtilisation( { collectorHost, targetHost } ) {
                 data-after="-120"
                 data-append-options="match-ids"
                 data-dimensions="dpc,user,privileged,interrupt"
-                data-colors="#5c64b0 #1e88c5 #11a6c6 #5dc0bd"
+                data-colors="#256BD1 #B21C87 #C9596A #F5D88E"
                 data-legend="yes"  
                 data-decimal-digits="-1"   
             >

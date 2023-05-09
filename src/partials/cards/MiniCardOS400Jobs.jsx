@@ -27,7 +27,7 @@ function MiniCardOS400Jobs( { collectorHost, targetHost } ) {
                 data-after="-300"
                 data-append-options="match-ids"
                 data-dimensions="system_total_jobs,system_active_jobs,system_interactive_jobs"
-                data-colors="#5c64b0 #0098c7 #5dc0bd"
+                data-colors="#256BD1 #B21C87 #C9596A"
           >
           </div>
         </div>

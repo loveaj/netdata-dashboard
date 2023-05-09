@@ -28,7 +28,7 @@ function MiniCardLINUXCpuUtilisation( { collectorHost, targetHost } ) {
                 data-after="-120"
                 data-append-options="match-ids"
                 data-dimensions="user,system"
-                data-colors="#5c64b0 #5dc0bd"
+                data-colors="#256BD1 #B21C87"
                 data-legend="yes"  
                 data-decimal-digits="-1"   
             >

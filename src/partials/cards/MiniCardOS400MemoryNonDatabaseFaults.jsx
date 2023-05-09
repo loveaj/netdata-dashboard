@@ -26,7 +26,7 @@ function MiniCardOS400MemoryNonDatabaseFaults( { collectorHost, targetHost } ) {
                 data-height="260px"
                 data-after="-300"
                 data-append-options="match-ids"
-                data-colors="#5c64b0 #1e88c5 #11a6c6 #5dc0bd"
+                data-colors="#256BD1 #B21C87 #C9596A #F5D88E"
           >
           </div>
         </div>

@@ -29,7 +29,7 @@ function MiniCardWINDOWSMemoryUtilisation( { collectorHost, targetHost } ) {
                 data-dimensions="free,used"
                 data-desired-units="Gb"
                 data-units="Gb"                
-                data-colors="#5c64b0 #5dc0bd"
+                data-colors="#256BD1 #B21C87"
                 data-legend="yes"  
                 data-decimal-digits="-1"   
             >
