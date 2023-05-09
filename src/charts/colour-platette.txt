@@ -2,3 +2,5 @@ Chart colour palette
 --------------------
 
 #256BD1 #B21C87 #C9596A #F5D88E #56A7C7 #4FB776
+
+#256BD1 #B21C87 #F5D88E #56A7C7 #4FB776

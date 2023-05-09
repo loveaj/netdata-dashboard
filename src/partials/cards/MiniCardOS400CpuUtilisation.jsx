@@ -27,7 +27,7 @@ function MiniCardOS400CpuUtilisation( { collectorHost, targetHost } ) {
                 data-after="-300"
                 data-append-options="match-ids"
                 data-dimensions="system_min_cpu_utilisation,system_avg_cpu_utilisation,system_max_cpu_utilisation"
-                data-colors="#256BD1 #B21C87 #C9596A"
+                data-colors="#256BD1 #B21C87 #F5D88E"
           >
           </div>
         </div>

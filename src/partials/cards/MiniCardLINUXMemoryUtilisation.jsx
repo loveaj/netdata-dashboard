@@ -27,7 +27,7 @@ function MiniCardLINUXMemoryUtilisation( { collectorHost, targetHost } ) {
                 data-after="-120"
                 data-append-options="match-ids"
                 data-dimensions="free,used,cached,buffers"
-                data-colors="#256BD1 #B21C87 #C9596A #F5D88E" 
+                data-colors="#256BD1 #B21C87 #F5D88E" 
                 data-legend="yes"  
                 data-decimal-digits="-1"   
             >
