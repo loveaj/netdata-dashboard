@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.6a9d3a87.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -11,7 +11,6 @@
         var netdataNoBootstrap = true;
         var netdataDontStart = true;
     </script>
-    <script type="text/javascript" src="http://localhost:19999/dashboard.js"></script>
     <script>
         // Options for environments
         // Should stay var!
@@ -48,14 +47,18 @@
 
         // enable or disable visibility management
         NETDATA.options.current.update_only_visible = false;
+
+        // set the netdatastatic host
+        NETDATA.serverStatic = '.'
     </script>
+    <script type="text/javascript" src="dashboard.js"></script>
 
     <title>Trading Platform Dashboard</title>
-  <script type="module" crossorigin src="/assets/index.27448830.js"></script>
-  <link rel="stylesheet" href="/assets/index.4fc2b73c.css">
+  <script type="module" crossorigin src="/assets/index.53e978b7.js"></script>
+  <link rel="stylesheet" href="/assets/index.11b5d21f.css">
 </head>
 
-<body class="antialiased font-inter bg-white text-slate-600">
+<body class="antialiased bg-white font-inter text-slate-600">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script>
         if (localStorage.getItem('sidebar-expanded') == 'true') {

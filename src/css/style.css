@@ -1,39 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
-
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 
 /* Additional styles */
+
 @import 'additional-styles/utility-patterns.css';
 @import 'additional-styles/range-slider.css';
 @import 'additional-styles/toggle-switch.css';
 @import 'additional-styles/flatpickr.css';
 @import 'additional-styles/theme.css';
-
 @import 'tailwindcss/utilities';
 
 /* Fonts */
+
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/roboto-regular.woff2?#iefix') format('woff2');
+    src: url('../fonts/Roboto-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/roboto-bold.woff2?#iefix') format('woff2');
+    src: url('../fonts/Roboto-Bold.ttf') format('ttf');
     font-weight: bold;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/roboto-italic.woff2?#iefix') format('woff2');
+    src: url('../fonts/Roboto-Italic.ttf') format('ttf');
     font-weight: normal;
     font-style: italic;
 }
+
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/roboto-light.woff2?#iefix') format('woff2');
+    src: url('../fonts/Roboto-Light.ttf') format('ttf');
     font-weight: 300;
     font-style: normal;
 }
