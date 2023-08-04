@@ -1,4 +1,4 @@
-# Trading Platform Dashboard
+# Custom Netdata Dashboard
 
 ## Design files
 
@@ -6,7 +6,7 @@ If you need the design files, you can download them from Figma's Community 👉 
 
 ## Table of contents
 
-- [Trading Platform Dashboard](#trading-platform-dashboard)
+- [Custom Netdata Dashboard](#custom-netdata-dashboard)
   - [Design files](#design-files)
   - [Table of contents](#table-of-contents)
   - [Usage](#usage)
