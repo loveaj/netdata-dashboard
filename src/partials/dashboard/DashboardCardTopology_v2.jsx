@@ -17,22 +17,31 @@ function DashboardCardTopology() {
 
 
   const handleOpenPanel = (id, label, os, collectorhost, targethost) => {
-    NETDATA.pause();    
-    setSelectedNodeId(id);
-    setSelectedNodeLabel(label);
-    setSelectedNodeOs(os.toUpperCase());
-    setCollectorHost(collectorhost);
-    setTargetHost(targethost);  
-    setOpenPanel(true);
-    NETDATA.unpause();
+    NETDATA.pause(function() {
+      setSelectedNodeId(id);
+      setSelectedNodeLabel(label);
+      setSelectedNodeOs(os.toUpperCase());
+      setCollectorHost(collectorhost);
+      setTargetHost(targethost);  
+     });    
   };
 
   const handleClosePanel = () => {
-    NETDATA.pause();
-    setTargetHost(false);  
-    setOpenPanel(false);
-    NETDATA.unpause();
+    NETDATA.pause(function() {
+      setTargetHost(false);  
+     });
   };
+
+  // Detect side panel open/close interaction
+  useEffect(() => {
+    console.log("DashboardCardTopology os=" + selectedNodeOs);
+    if ( targetHost === false ) {
+      setOpenPanel(false);
+    } else {
+      setOpenPanel(true);
+    }
+    NETDATA.unpause();
+  }, [ selectedNodeId, selectedNodeLabel, selectedNodeOs, collectorHost, targetHost ]); 
 
   // Read in topology data
   useEffect(() => {
