@@ -5,7 +5,7 @@
             "group": 2,
             "colour": "#ee0600",
             "scale": 4,
-            "os": "Linux",
+            "os": "LINUX",
             "collectorhost": "lovea-xps",
             "targethost": "lovea-xps",
             "dashlink": ""
@@ -16,7 +16,7 @@
             "group": 1,
             "colour": "#082e9e",
             "scale": 6,
-            "os": "Os400",
+            "os": "OS400",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "AJBCOPY",
             "dashlink": "/platform/ibmi?collectorHost=BCA-AJC-ND-01&targetHost=AJBCOPY"
@@ -27,10 +27,10 @@
             "group": 2,
             "colour": "#ee0600",
             "scale": 4,
-            "os": "Linux",
+            "os": "LINUX",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-TC-01",
-            "dashlink": "/platform/serverlinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-TC-01"
+            "dashlink": "/platform/serverLinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-TC-01"
         },
         {
             "id": "BCA-AJC-TC-06",
@@ -38,10 +38,10 @@
             "group": 2,
             "colour": "#ee0600",
             "scale": 4,
-            "os": "Linux",
+            "os": "LINUX",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-TC-06",
-            "dashlink": "/platform/serverlinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-TC-06"
+            "dashlink": "/platform/serverLinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-TC-06"
         },
         {
             "id": "BCA-AJC-TC-08",
@@ -49,10 +49,10 @@
             "group": 2,
             "colour": "#ee0600",
             "scale": 4,
-            "os": "Linux",
+            "os": "LINUX",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-TC-08",
-            "dashlink": "/platform/serverlinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-TC-08"
+            "dashlink": "/platform/serverLinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-TC-08"
         },
         {
             "id": "BCA-AJC-LD-01",
@@ -60,10 +60,10 @@
             "group": 2,
             "colour": "#ee0600",
             "scale": 4,
-            "os": "Linux",
+            "os": "LINUX",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-LD-01",
-            "dashlink": "/platform/serverlinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-LD-01"
+            "dashlink": "/platform/serverLinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-LD-01"
         },
         {
             "id": "BCA-AJC-MD-01",
@@ -71,10 +71,10 @@
             "group": 2,
             "colour": "#ee0600",
             "scale": 4,
-            "os": "Linux",
+            "os": "LINUX",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-MD-01",
-            "dashlink": "/platform/serverlinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-MD-01"
+            "dashlink": "/platform/serverLinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-MD-01"
         },
         {
             "id": "BCA-AJC-MD-02",
@@ -82,10 +82,10 @@
             "group": 2,
             "colour": "#ee0600",
             "scale": 4,
-            "os": "Linux",
+            "os": "LINUX",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-MD-02",
-            "dashlink": "/platform/serverlinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-MD-02"
+            "dashlink": "/platform/serverLinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-MD-02"
         },
         {
             "id": "BCA-AJC-DS-01",
@@ -93,7 +93,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-DS-01",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-DS-01"
@@ -104,7 +104,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-DS-02",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-DS-02"
@@ -115,7 +115,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-DS-03",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-DS-03"
@@ -126,7 +126,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-ER-01",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-ER-01"
@@ -137,7 +137,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-ER-02",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-ER-02"
@@ -148,7 +148,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-ER-03",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-ER-03"
@@ -159,7 +159,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-ER-04",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-ER-04"
@@ -170,7 +170,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-IR-01",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-IR-01"
@@ -181,7 +181,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-IR-02",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-IR-02"
@@ -192,7 +192,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-IR-03",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-IR-03"
@@ -203,7 +203,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-FT-01",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-FT-01"
@@ -214,7 +214,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-HI-02",
             "dashlink": "/platform/serverwindowslarge?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-HI-02"
@@ -225,7 +225,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-MW-01",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-MW-01"
@@ -236,7 +236,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-MW-02",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-MW-02"
@@ -247,7 +247,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-PP-01",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-PP-01"
@@ -258,7 +258,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-PP-02",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-PP-02"
@@ -269,7 +269,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-PP-03",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-PP-03"
@@ -280,7 +280,7 @@
             "group": 3,
             "colour": "#178add",
             "scale": 4,
-            "os": "Windows",
+            "os": "WINDOWS",
             "collectorhost": "BCA-AJC-ND-01",
             "targethost": "BCA-AJC-PP-04",
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-PP-04"
