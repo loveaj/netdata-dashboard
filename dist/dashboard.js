@@ -827,6 +827,13 @@ NETDATA.unitsConversion = {
             'GiB/s': 1024 * 1024,
             'TiB/s': 1024 * 1024 * 1024
         },
+        'bytes': {
+            'bytes': 1,
+            'kilobytes': 1024,
+            'megabytes': 1024 * 1024,
+            'gigabytes': 1024 * 1024 * 1024,
+            'terabytes': 1024 * 1024 * 1024 * 1024
+        },
         'B': {
             'B': 1,
             'KiB': 1024,
@@ -889,7 +896,17 @@ NETDATA.unitsConversion = {
             'num (M)': 1000000,
             'num (G)': 1000000000,
             'num (T)': 1000000000000
-        }
+        },
+        'Hz': {
+            'Hz': 1,
+            'kHz': 10 ** 3,
+            'MHz': 10 ** 6,
+            'GHz': 10 ** 9,
+            'THz': 10 ** 12,
+            'PHz': 10 ** 15,
+            'EHz': 10 ** 18,
+            'ZHz': 10 ** 21,
+        },
         /*
         'milliseconds': {
             'seconds': 1000
@@ -1451,7 +1468,7 @@ NETDATA.options = {
 
         sync_selection: true,       // enable or disable selection sync
 
-        pan_and_zoom_delay: 50,     // when panning or zooming, how ofter to update the chart
+        pan_and_zoom_delay: 50,     // when panning or zooming, how often to update the chart
 
         sync_pan_and_zoom: true,    // enable or disable pan and zoom sync
 
@@ -2199,9 +2216,6 @@ NETDATA.dygraphChartCreate = function (state, data) {
         visibility: state.dimensions_visibility.selected2BooleanArray(state.data.dimension_names),
         logscale: NETDATA.chartLibraries.dygraph.isLogScale(state) ? 'y' : undefined,
 
-        // Expects a string in the format "<series name>: <style>" where each series is separated by a |
-        perSeriesStyle: NETDATA.dataAttribute(state.element, 'dygraph-per-series-style', ''),
-
         axes: {
             x: {
                 pixelsPerLabel: NETDATA.dataAttribute(state.element, 'dygraph-xpixelsperlabel', 50),
@@ -2858,23 +2872,18 @@ NETDATA.dygraphChartCreate = function (state, data) {
         //state.tmp.dygraph_options.isZoomedIgnoreProgrammaticZoom = true;
     }
 
-    let seriesStyles = NETDATA.dygraphGetSeriesStyle(state.tmp.dygraph_options);
-    state.tmp.dygraph_options.series = seriesStyles;
+    state.tmp.dygraph_instance = new Dygraph(state.element_chart,
+        data.result.data, state.tmp.dygraph_options);
 
-    state.tmp.dygraph_instance = new Dygraph(
-        state.element_chart,
-        data.result.data,
-        state.tmp.dygraph_options
-    );
 
     state.tmp.dygraph_history_tip_element = document.createElement('div');
     state.tmp.dygraph_history_tip_element.innerHTML = `
         <span class="dygraph__history-tip-content">
           Want to extend your history of real-time metrics?
           <br />
-           <a href="https://docs.netdata.cloud/docs/configuration-guide/#increase-the-metrics-retention-period" target=_blank>
+           <a href="https://learn.netdata.cloud/guides/longer-metrics-storage/" target=_blank>
              Configure Netdata's <b>history</b></a>
-           or use the <a href="https://docs.netdata.cloud/database/engine/" target=_blank>DB engine</a>.
+           or use the <a href="https://learn.netdata.cloud/docs/agent/database/engine/" target=_blank>DB engine</a>.
         </span>
     `;
     state.tmp.dygraph_history_tip_element.className = 'dygraph__history-tip';
@@ -2902,51 +2911,6 @@ NETDATA.dygraphChartCreate = function (state, data) {
     }
 
     return true;
-};
-
-NETDATA.dygraphGetSeriesStyle = function(dygraphOptions) {
-    const seriesStyleStr = dygraphOptions.perSeriesStyle;
-    let formattedStyles = {};
-
-    if (seriesStyleStr === '') {
-      return formattedStyles;
-    }
-
-    // Parse the config string into a JSON object
-    let styles = seriesStyleStr.replace(' ', '').split('|');
-
-    styles.forEach(style => {
-        const keys = style.split(':');
-        formattedStyles[keys[0]] = keys[1];
-    });
-
-    for (let key in formattedStyles) {
-        if (formattedStyles.hasOwnProperty(key)) {
-            let settings;
-
-            switch (formattedStyles[key]) {
-                case 'line':
-                    settings = { fillGraph: false };
-                    break;
-                case 'area':
-                    settings = { fillGraph: true };
-                    break;
-                case 'dot':
-                    settings = {
-                        fillGraph: false,
-                        drawPoints: true,
-                        pointSize: dygraphOptions.pointSize
-                    };
-                    break;
-                default:
-                    settings = undefined;
-            }
-
-            formattedStyles[key] = settings;
-        }
-    }
-
-    return formattedStyles;
 };
 // ----------------------------------------------------------------------------------------------------------------
 // sparkline
@@ -3512,7 +3476,7 @@ NETDATA.gaugeChartCreate = function (state, data) {
         colorStart: startColor,     // Colors
         colorStop: stopColor,       // just experiment with them
         strokeColor: strokeColor,   // to see which ones work best for you
-        generateGradient: (generateGradient === true), // gmosx: 
+        generateGradient: (generateGradient === true), // gmosx:
         gradientType: 0,
         highDpiSupport: true        // High resolution support
     };
@@ -6993,7 +6957,7 @@ let chartState = function (element) {
                 resizeChartToHeight(this.height_original.toString());
             }
 
-            // else if the current height is not the firstChild's clientheight
+            // else if the current height is not the firstchild's clientheight
             // resize to it
             else if (typeof this.element_legend_childs.perfect_scroller.firstChild !== 'undefined') {
                 let parent_rect = this.element.getBoundingClientRect();
@@ -8395,7 +8359,6 @@ let chartState = function (element) {
         if (this.dimensions) {
             this.data_url += "&dimensions=" + this.dimensions;
         }
-
         if (NETDATA.options.debug.chart_data_url || this.debug) {
             this.log('chartURL(): ' + this.data_url + ' WxH:' + this.chartWidth() + 'x' + this.chartHeight() + ' points: ' + data_points.toString() + ' library: ' + this.library_name);
         }
@@ -10020,7 +9983,7 @@ NETDATA.registry = {
                 }
                 NETDATA.registry.access(2, function (person_urls) {
                     NETDATA.registry.parsePersonUrls(person_urls);
-                });    
+                });
             }
         });
     },
@@ -10063,15 +10026,8 @@ NETDATA.registry = {
     },
 
     access: function (max_redirects, callback) {
-        let name = NETDATA.registry.MASKED_DATA;
-        let url = NETDATA.registry.MASKED_DATA;
-
-        if (!NETDATA.registry.isUsingGlobalRegistry()) {
-            // If the user is using a private registry keep sending identifiable
-            // data.
-            name = NETDATA.registry.hostname;
-            url = NETDATA.serverDefault;
-        } 
+        let name = NETDATA.registry.hostname;
+        let url = NETDATA.serverDefault;
 
         console.log("ACCESS", name, url);
 
