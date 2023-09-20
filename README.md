@@ -27,8 +27,14 @@ npm install
 ```
 
 #### Compiles and hot-reloads for development
+Run locally  
 ```
 npm run dev
+```
+
+Run for network access on TCP/IP port 19998
+```
+npm run dev -- --port=19998
 ```
 
 #### Compiles and minifies for production
