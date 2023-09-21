@@ -3,10 +3,10 @@ import { useSearchParams } from "react-router-dom";
 
 function DashboardCardIbmiAspUsedPercent() {
 
-  let [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const targetHost = searchParams.get("targetHost")
-  const collectorUrl = "http://localhost:19999/"
   const collectorHost = searchParams.get("collectorHost")
+  const collectorUrl = "http://localhost:19999/"
   const targetData = "ibmi_remote.asp_used_percent"
   const targetDataId = collectorHost + "_ibmi_remote_asp_used_percent"
 

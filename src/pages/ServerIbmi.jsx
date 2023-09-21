@@ -21,6 +21,7 @@ function ServerIbmi() {
 
   const [searchParams, setSearchParams] = useSearchParams()
   const targetHost = searchParams.get("targetHost")
+  const collectorHost = searchParams.get("collectorHost")
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
