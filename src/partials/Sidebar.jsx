@@ -157,7 +157,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             <NavLink
                               reloadDocument
                               end
-                              to="/platform/serverlinux?targetHost=localhost"
+                              to="/platform/serverlinux?collectorHost=BCA-AJC-ND-01&targetHost=localhost"
                               className="block text-white truncate transition duration-150 hover:text-red-300"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
