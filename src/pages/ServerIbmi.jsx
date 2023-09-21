@@ -19,7 +19,7 @@ import DashboardCardIbmiMemoryWaitToIneligible from '../partials/dashboard/Dashb
 
 function ServerIbmi() {
 
-  let [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const targetHost = searchParams.get("targetHost")
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
