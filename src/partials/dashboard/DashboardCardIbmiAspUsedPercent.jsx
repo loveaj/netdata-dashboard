@@ -29,6 +29,8 @@ function DashboardCardIbmiAspUsedPercent() {
       </div>
       <div className="ml-15 grow">
         <div data-netdata={targetData} 
+              data-id={targetDataId}
+              data-host={collectorUrl}
               data-chart-library="easypiechart" 
               data-title="Used ASP" 
               data-units="%"
