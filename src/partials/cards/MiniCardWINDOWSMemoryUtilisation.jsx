@@ -4,8 +4,8 @@ function MiniCardWINDOWSMemoryUtilisation( { collectorHost, targetHost } ) {
 
   //const collectorUrl = "http://" + collectorHost + ":19999/"
   const collectorUrl = "http://localhost:19999/"
-  const targetData = "wmi_" + targetHost + ".os_visible_memory_usage"
-  const targetDataId = collectorHost + "_wmi_" + targetHost + "_os_visible_memory_usage"
+  const targetData = "windows_" + targetHost + ".os_visible_memory_usage"
+  const targetDataId = collectorHost + "_windows_" + targetHost + "_os_visible_memory_usage"
 
   return (
     <React.Fragment>

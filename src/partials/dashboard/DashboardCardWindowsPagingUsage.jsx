@@ -3,8 +3,8 @@ import React from 'react';
 function DashboardCardWindowsPagingUsage({ collectorHost, targetHost }) {
 
   const collectorUrl = "http://localhost:19999/"
-  const targetData = "wmi_" + targetHost + ".os_paging_files_usage"
-  const targetDataId = collectorHost + "_wmi_" + targetHost + "_os_paging_files_usage"
+  const targetData = "windows_" + targetHost + ".os_paging_files_usage"
+  const targetDataId = collectorHost + "_windows_" + targetHost + "_os_paging_files_usage"
   
   return (
     <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">

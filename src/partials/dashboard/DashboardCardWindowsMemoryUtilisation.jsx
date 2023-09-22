@@ -3,8 +3,8 @@ import React from 'react';
 function DashboardCardWindowsMemoryUtilisation({ collectorHost, targetHost }) {
 
   const collectorUrl = "http://localhost:19999/"
-  const targetData = "wmi_" + targetHost + ".os_visible_memory_usage"
-  const targetDataId = collectorHost + "_wmi_" + targetHost + "_os_visible_memory_usage"
+  const targetData = "windows_" + targetHost + ".os_visible_memory_usage"
+  const targetDataId = collectorHost + "_windows_" + targetHost + "_os_visible_memory_usage"
   
   return (
     <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">
