@@ -9,10 +9,10 @@ function MiniCardWINDOWSMultiDiskUsedPercent( { collectorHost, targetHost } ) {
   const targetData2 = "windows_" + targetHost + ".logical_disk_D:_space_usage"
   const targetData3 = "windows_" + targetHost + ".logical_disk_E:_space_usage"
   const targetData4 = "windows_" + targetHost + ".logical_disk_S:_space_usage"
-  const targetDataId1 = collectorHost + "_windows_" + targetHost + "_logical_disk_C:_space_usage"
-  const targetDataId2 = collectorHost + "_windows_" + targetHost + "_logical_disk_D:_space_usage"
-  const targetDataId3 = collectorHost + "_windows_" + targetHost + "_logical_disk_E:_space_usage"
-  const targetDataId4 = collectorHost + "_windows_" + targetHost + "_logical_disk_S:_space_usage"
+  const targetDataId1 = targetHost + "_windows_" + targetHost + "_logical_disk_C:_space_usage"
+  const targetDataId2 = targetHost + "_windows_" + targetHost + "_logical_disk_D:_space_usage"
+  const targetDataId3 = targetHost + "_windows_" + targetHost + "_logical_disk_E:_space_usage"
+  const targetDataId4 = targetHost + "_windows_" + targetHost + "_logical_disk_S:_space_usage"
 
   return (
     <React.Fragment>
