@@ -2,7 +2,7 @@ import React from 'react';
 
 function MiniCardWINDOWSDiskUsedPercent( { collectorHost, targetHost } ) {
 
-  const collectorUrl = "http://localhost:19999/"
+  const collectorUrl = "http://localhost:19999/host/" + targetHost
   const targetData = "windows_" + targetHost + ".logical_disk_C:_space_usage"
   const targetDataId = targetHost + "_windows_" + targetHost + "_logical_disk_C:_space_usage"
   
