@@ -1,12 +1,8 @@
 import React from 'react';
-import { useSearchParams } from "react-router-dom";
 
-function DashboardCardWindowsMultiDiskUsedPercent() {
+function DashboardCardWindowsMultiDiskUsedPercent({ collectorHost, targetHost }) {
 
-  let [searchParams, setSearchParams] = useSearchParams()
-  const targetHost = searchParams.get("targetHost")
   const collectorUrl = "http://localhost:19999/"
-  const collectorHost = searchParams.get("collectorHost")
   const targetData1 = "wmi_" + targetHost + ".logical_disk_C:_space_usage"
   const targetData2 = "wmi_" + targetHost + ".logical_disk_D:_space_usage"
   const targetData3 = "wmi_" + targetHost + ".logical_disk_E:_space_usage"

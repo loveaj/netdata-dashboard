@@ -1,12 +1,8 @@
 import React from 'react';
-import { useSearchParams } from "react-router-dom";
 
-function DashboardCardLinuxCpuUtilisation() {
+function DashboardCardLinuxCpuUtilisation({ collectorHost, targetHost }) {
 
-  let [searchParams, setSearchParams] = useSearchParams()
-  const targetHost = searchParams.get("targetHost")
   const collectorUrl = "http://localhost:19999/host/" + targetHost
-  const collectorHost = searchParams.get("collectorHost")
   const targetData = "system.cpu"
   const targetDataId = collectorHost + "_system_cpu"
 
@@ -26,7 +22,7 @@ function DashboardCardLinuxCpuUtilisation() {
       </div>
       <div className="mt-2 mb-2 grow">
         <div data-netdata={targetData} 
-              data-id={targetDataId}
+              // data-id={targetDataId}
               data-host={collectorUrl}
               data-chart-library="dygraph" 
               data-dygraph-type="sparkline"

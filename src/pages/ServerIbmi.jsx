@@ -51,31 +51,31 @@ function ServerIbmi() {
             {/* Cards */}
             <div className="grid grid-cols-12 gap-6">
               {/* Gauge chart (ASP utilisation %) */}
-              <DashboardCardIbmiAspUsedPercent />
+              <DashboardCardIbmiAspUsedPercent collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (ASP utilisation) */}
-              <DashboardCardIbmiAspUsed />
+              <DashboardCardIbmiAspUsed collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Temp storage utilisation) */}
-              <DashboardCardIbmiTempStorageUtilisation />
+              <DashboardCardIbmiTempStorageUtilisation collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (CPU utilisation) */}
-              <DashboardCardIbmiCpuUtilisation />
+              <DashboardCardIbmiCpuUtilisation collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Job stats) */}
-              <DashboardCardIbmiJobs />
+              <DashboardCardIbmiJobs collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Memory pool sizes) */}
-              <DashboardCardIbmiMemoryPoolSizes />
+              <DashboardCardIbmiMemoryPoolSizes collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Memory pool database faults) */}
-              <DashboardCardIbmiMemoryDatabaseFaults />
+              <DashboardCardIbmiMemoryDatabaseFaults collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Memory pool non-database faults) */}
-              <DashboardCardIbmiMemoryNonDatabaseFaults />
+              <DashboardCardIbmiMemoryNonDatabaseFaults collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Memory pool database pages) */}
-              <DashboardCardIbmiMemoryDatabasePages />
+              <DashboardCardIbmiMemoryDatabasePages collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Memory pool non-database pages) */}
-              <DashboardCardIbmiMemoryNonDatabasePages />
+              <DashboardCardIbmiMemoryNonDatabasePages collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Memory pool thread transitions from Active to Ineligible) */}
-              <DashboardCardIbmiMemoryActiveToIneligible />
+              <DashboardCardIbmiMemoryActiveToIneligible collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Memory pool thread transitions from Active to Wait) */}
-              <DashboardCardIbmiMemoryActiveToWait />
+              <DashboardCardIbmiMemoryActiveToWait collectorHost={collectorHost} targetHost={targetHost} />
               {/* Sparkline (Memory pool thread transitions from Wait to Ineligible) */}
-              <DashboardCardIbmiMemoryWaitToIneligible />
+              <DashboardCardIbmiMemoryWaitToIneligible collectorHost={collectorHost} targetHost={targetHost} />
             </div>
  
           </div>

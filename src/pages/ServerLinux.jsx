@@ -9,8 +9,9 @@ import DashboardCardLinuxMemoryUtilisation from '../partials/dashboard/Dashboard
 
 function ServerLinux() {
 
-  let [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const targetHost = searchParams.get("targetHost")
+  const collectorHost = searchParams.get("collectorHost")
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -40,11 +41,11 @@ function ServerLinux() {
             {/* Cards */}
             <div className="grid grid-cols-12 gap-6">
               {/* Disk utilisation  */}
-              <DashboardCardLinuxDiskUsedPercent />
+              <DashboardCardLinuxDiskUsedPercent collectorHost={collectorHost} targetHost={targetHost} />
               {/* CPU system.cpu */}
-              <DashboardCardLinuxCpuUtilisation />
+              <DashboardCardLinuxCpuUtilisation collectorHost={collectorHost} targetHost={targetHost} />
               {/* Memory system.ram */}
-              <DashboardCardLinuxMemoryUtilisation />
+              <DashboardCardLinuxMemoryUtilisation collectorHost={collectorHost} targetHost={targetHost} />
               {/* Swappiness system.swap */}
               {/* I/O system.io */}
             </div>

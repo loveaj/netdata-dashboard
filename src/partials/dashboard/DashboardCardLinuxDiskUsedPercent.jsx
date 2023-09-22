@@ -1,12 +1,8 @@
 import React from 'react';
-import { useSearchParams } from "react-router-dom";
 
-function DashboardCardLinuxDiskUsedPercent() {
+function DashboardCardLinuxDiskUsedPercent({ collectorHost, targetHost }) {
 
-  let [searchParams, setSearchParams] = useSearchParams()
-  const targetHost = searchParams.get("targetHost")
   const collectorUrl = "http://localhost:19999/host/" + targetHost
-  const collectorHost = searchParams.get("collectorHost")
   const targetData = "disk_space._"
   const targetDataId = collectorHost + "_disk_space__"
 
@@ -26,7 +22,7 @@ function DashboardCardLinuxDiskUsedPercent() {
       </div>
       <div className="mt-2 mb-2 grow">
         <div data-netdata={targetData} 
-              data-id={targetDataId}
+              // data-id={targetDataId}
               data-host={collectorUrl}
               data-append-options="percentage"
               data-chart-library="easypiechart" 

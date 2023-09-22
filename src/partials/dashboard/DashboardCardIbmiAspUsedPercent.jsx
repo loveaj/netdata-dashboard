@@ -1,11 +1,7 @@
 import React from 'react';
-import { useSearchParams } from "react-router-dom";
 
-function DashboardCardIbmiAspUsedPercent() {
+function DashboardCardIbmiAspUsedPercent({ collectorHost, targetHost }) {
 
-  const [searchParams, setSearchParams] = useSearchParams()
-  const targetHost = searchParams.get("targetHost")
-  const collectorHost = searchParams.get("collectorHost")
   const collectorUrl = "http://localhost:19999/"
   const targetData = "ibmi_remote.asp_used_percent"
   const targetDataId = collectorHost + "_ibmi_remote_asp_used_percent"
@@ -29,8 +25,8 @@ function DashboardCardIbmiAspUsedPercent() {
       </div>
       <div className="ml-15 grow">
         <div data-netdata={targetData} 
-              data-id={targetDataId}
               data-host={collectorUrl}
+              // data-id={targetDataId}
               data-chart-library="easypiechart" 
               data-title="Used ASP" 
               data-units="%"

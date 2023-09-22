@@ -1,12 +1,8 @@
 import React from 'react';
-import { useSearchParams } from "react-router-dom";
 
-function DashboardCardWindowsPagingUsage() {
+function DashboardCardWindowsPagingUsage({ collectorHost, targetHost }) {
 
-  let [searchParams, setSearchParams] = useSearchParams()
-  const targetHost = searchParams.get("targetHost")
   const collectorUrl = "http://localhost:19999/"
-  const collectorHost = searchParams.get("collectorHost")
   const targetData = "wmi_" + targetHost + ".os_paging_files_usage"
   const targetDataId = collectorHost + "_wmi_" + targetHost + "_os_paging_files_usage"
   

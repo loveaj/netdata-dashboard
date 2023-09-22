@@ -10,8 +10,9 @@ import DashboardCardWindowsPagingUsage from '../partials/dashboard/DashboardCard
 
 function ServerWindowsLarge() {
 
-  let [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const targetHost = searchParams.get("targetHost")
+  const collectorHost = searchParams.get("collectorHost")
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -41,13 +42,13 @@ function ServerWindowsLarge() {
             {/* Cards */}
             <div className="grid grid-cols-12 gap-6">
               {/* Disk utilisation  */}
-              < DashboardCardWindowsMultiDiskUsedPercent />
+              < DashboardCardWindowsMultiDiskUsedPercent collectorHost={collectorHost} targetHost={targetHost} />
               {/* CPU system.cpu */}
-              <DashboardCardWindowsCpuUtilisation />
+              <DashboardCardWindowsCpuUtilisation collectorHost={collectorHost} targetHost={targetHost} />
               {/* Memory visible */}
-              < DashboardCardWindowsMemoryUtilisation />
+              < DashboardCardWindowsMemoryUtilisation collectorHost={collectorHost} targetHost={targetHost} />
               {/* Paging usage */}
-              < DashboardCardWindowsPagingUsage />
+              < DashboardCardWindowsPagingUsage collectorHost={collectorHost} targetHost={targetHost} />
             </div>
  
           </div>

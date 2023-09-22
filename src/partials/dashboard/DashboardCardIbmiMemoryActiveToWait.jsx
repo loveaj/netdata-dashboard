@@ -1,12 +1,8 @@
 import React  from 'react';
-import { useSearchParams } from "react-router-dom";
 
-function DashboardCardIbmiMemoryActiveToWait() {
+function DashboardCardIbmiMemoryActiveToWait({ collectorHost, targetHost }) {
 
-  let [searchParams, setSearchParams] = useSearchParams()
-  const targetHost = searchParams.get("targetHost")
   const collectorUrl = "http://localhost:19999/"
-  const collectorHost = searchParams.get("collectorHost")
   const targetData = "ibmi_remote.memory_active_to_wait"
   const targetDataId = collectorHost + "_ibmi_remote_memory_active_to_wait"
  
@@ -29,7 +25,7 @@ function DashboardCardIbmiMemoryActiveToWait() {
       </div>
       <div className="mt-2 mb-2 grow">
         <div data-netdata={targetData} 
-              data-id={targetDataId}
+              // data-id={targetDataId}
               data-host={collectorUrl}
               data-chart-library="dygraph" 
               data-dygraph-type="sparkline"
