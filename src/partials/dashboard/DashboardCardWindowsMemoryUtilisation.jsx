@@ -2,7 +2,7 @@ import React from 'react';
 
 function DashboardCardWindowsMemoryUtilisation({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
+  const collectorUrl = "http://" + collectorHost + ":19999/"
   const targetData = "windows_" + targetHost + ".os_visible_memory_usage"
   const targetDataId = collectorHost + "_windows_" + targetHost + "_os_visible_memory_usage"
   

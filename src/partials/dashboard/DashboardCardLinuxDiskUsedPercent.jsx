@@ -2,7 +2,7 @@ import React from 'react';
 
 function DashboardCardLinuxDiskUsedPercent({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://BCA-AJC-ND-01:19999/host/" + targetHost
+  const collectorUrl = "http://" + collectorHost + ":19999/host/" + targetHost
   const targetData = "disk_space._"
   const targetDataId = collectorHost + "_disk_space__"
 

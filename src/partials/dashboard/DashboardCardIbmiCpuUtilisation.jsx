@@ -2,7 +2,7 @@ import React  from 'react';
 
 function DashboardCardIbmiCpuUtilisation({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
+  const collectorUrl = "http://" + collectorHost + ":19999/"
   const targetData = "ibmi_remote.cpu_utilisation"
   const targetDataId = collectorHost + "_ibmi_remote_cpu_utilisation"
  

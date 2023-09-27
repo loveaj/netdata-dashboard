@@ -2,7 +2,7 @@ import React from 'react';
 
 function DashboardCardWindowsDiskUsedPercent({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
+  const collectorUrl = "http://" + collectorHost + ":19999/"
   const targetData = "windows_" + targetHost + ".logical_disk_C:_space_usage"
   const targetDataId = collectorHost + "_windows_" + targetHost + "_logical_disk_C:_space_usage"
   

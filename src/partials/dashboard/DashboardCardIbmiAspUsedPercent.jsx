@@ -2,7 +2,7 @@ import React from 'react';
 
 function DashboardCardIbmiAspUsedPercent({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
+  const collectorUrl = "http://" + collectorHost + ":19999/"
   const targetData = "ibmi_remote.asp_used_percent"
   const targetDataId = collectorHost + "_ibmi_remote_asp_used_percent"
 
