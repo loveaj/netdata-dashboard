@@ -3,7 +3,7 @@ import React from 'react';
 function MiniCardLINUXMemoryUtilisation( { collectorHost, targetHost } ) {
 
   //const collectorUrl = "http://" + collectorHost + ":19999/"
-  const collectorUrl = "http://localhost:19999/host/" + targetHost
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/host/" + targetHost
   const targetData = "system.ram"
   const targetDataId = collectorHost + "_system_cpu"
 

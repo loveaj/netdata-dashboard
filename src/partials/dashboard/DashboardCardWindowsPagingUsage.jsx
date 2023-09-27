@@ -2,7 +2,7 @@ import React from 'react';
 
 function DashboardCardWindowsPagingUsage({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://localhost:19999/"
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
   const targetData = "windows_" + targetHost + ".os_paging_files_usage"
   const targetDataId = collectorHost + "_windows_" + targetHost + "_os_paging_files_usage"
   

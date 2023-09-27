@@ -2,7 +2,7 @@ import React  from 'react';
 
 function DashboardCardIbmiMemoryActiveToIneligible({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://localhost:19999/"
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
   const targetData = "ibmi_remote.memory_active_to_ineligible"
   const targetDataId = collectorHost + "_ibmi_remote_memory_active_to_ineligible"
  

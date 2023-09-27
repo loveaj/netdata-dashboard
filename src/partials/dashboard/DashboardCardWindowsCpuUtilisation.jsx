@@ -2,7 +2,7 @@ import React from 'react';
 
 function DashboardCardWindowsCpuUtilisation({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://localhost:19999/"
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
   const targetData = "windows_" + targetHost + ".cpu_utilization_total"
   const targetDataId = collectorHost + "_windows_" + targetHost + "_cpu_utilization_total"
   
