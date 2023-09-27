@@ -2,15 +2,15 @@ import React from 'react';
 
 function DashboardCardWindowsMultiDiskUsedPercent({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://localhost:19999/"
-  const targetData1 = "wmi_" + targetHost + ".logical_disk_C:_space_usage"
-  const targetData2 = "wmi_" + targetHost + ".logical_disk_D:_space_usage"
-  const targetData3 = "wmi_" + targetHost + ".logical_disk_E:_space_usage"
-  const targetData4 = "wmi_" + targetHost + ".logical_disk_S:_space_usage"
-  const targetDataId1 = collectorHost + "_wmi_" + targetHost + "_logical_disk_C:_space_usage"
-  const targetDataId2 = collectorHost + "_wmi_" + targetHost + "_logical_disk_D:_space_usage"
-  const targetDataId3 = collectorHost + "_wmi_" + targetHost + "_logical_disk_E:_space_usage"
-  const targetDataId4 = collectorHost + "_wmi_" + targetHost + "_logical_disk_S:_space_usage"
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
+  const targetData1 = "windows_" + targetHost + ".logical_disk_C:_space_usage"
+  const targetData2 = "windows_" + targetHost + ".logical_disk_D:_space_usage"
+  const targetData3 = "windows_" + targetHost + ".logical_disk_E:_space_usage"
+  const targetData4 = "windows_" + targetHost + ".logical_disk_S:_space_usage"
+  const targetDataId1 = collectorHost + "_windows_" + targetHost + "_logical_disk_C:_space_usage"
+  const targetDataId2 = collectorHost + "_windows_" + targetHost + "_logical_disk_D:_space_usage"
+  const targetDataId3 = collectorHost + "_windows_" + targetHost + "_logical_disk_E:_space_usage"
+  const targetDataId4 = collectorHost + "_windows_" + targetHost + "_logical_disk_S:_space_usage"
   
   return (
     <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">

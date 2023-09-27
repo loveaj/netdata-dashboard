@@ -3,7 +3,7 @@ import React from 'react';
 function MiniCardOS400MemoryNonDatabasePages( { collectorHost, targetHost } ) {
 
   //const collectorUrl = "http://" + collectorHost + ":19999/"
-  const collectorUrl = "http://localhost:19999/"
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
   const targetData = "ibmi_remote.memory_nondatabase_pages"
   const targetDataId = collectorHost + "_ibmi_remote_memory_nondatabase_pages"
 

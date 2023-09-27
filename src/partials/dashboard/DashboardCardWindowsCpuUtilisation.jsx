@@ -2,9 +2,9 @@ import React from 'react';
 
 function DashboardCardWindowsCpuUtilisation({ collectorHost, targetHost }) {
 
-  const collectorUrl = "http://localhost:19999/"
-  const targetData = "wmi_" + targetHost + ".cpu_utilization_total"
-  const targetDataId = collectorHost + "_wmi_" + targetHost + "_cpu_utilization_total"
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/"
+  const targetData = "windows_" + targetHost + ".cpu_utilization_total"
+  const targetDataId = collectorHost + "_windows_" + targetHost + "_cpu_utilization_total"
   
   return (
     <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">

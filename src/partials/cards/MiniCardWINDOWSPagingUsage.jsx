@@ -3,9 +3,9 @@ import React from 'react';
 function MiniCardWINDOWSPagingUsage( { collectorHost, targetHost } ) {
 
   //const collectorUrl = "http://" + collectorHost + ":19999/"
-  const collectorUrl = "http://localhost:19999/"
-  const targetData = "wmi_" + targetHost + ".os_paging_files_usage"
-  const targetDataId = collectorHost + "_wmi_" + targetHost + "_os_paging_files_usage"
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/host/" + targetHost
+  const targetData = "windows_" + targetHost + ".os_paging_files_usage"
+  const targetDataId = targetHost + "_windows_" + targetHost + "_os_paging_files_usage"
 
   return (
     <React.Fragment>

@@ -3,9 +3,9 @@ import React from 'react';
 function MiniCardWINDOWSCpuUtilisation( { collectorHost, targetHost } ) {
 
   //const collectorUrl = "http://" + collectorHost + ":19999/"
-  const collectorUrl = "http://localhost:19999/"
-  const targetData = "wmi_" + targetHost + ".cpu_utilization_total"
-  const targetDataId = collectorHost + "_wmi_" + targetHost + "_cpu_utilization_total"
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/host/" + targetHost
+  const targetData = "windows_" + targetHost + ".cpu_utilization_total"
+  const targetDataId = targetHost + "_windows_" + targetHost + "_cpu_utilization_total"
 
   return (
     <React.Fragment>

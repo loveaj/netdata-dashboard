@@ -3,7 +3,7 @@ import React from 'react';
 function MiniCardLINUXCpuUtilisation( { collectorHost, targetHost } ) {
 
   //const collectorUrl = "http://" + collectorHost + ":19999/"
-  const collectorUrl = "http://localhost:19999/host/" + targetHost
+  const collectorUrl = "http://BCA-AJC-ND-01:19999/host/" + targetHost
   const targetData = "system.cpu"
   const targetDataId = collectorHost + "_system_cpu"
 
