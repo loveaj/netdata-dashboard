@@ -17,9 +17,9 @@
             "colour": "#082e9e",
             "scale": 6,
             "os": "OS400",
-            "collectorhost": "BCA-AJC-ND-01",
+            "collectorhost": "localhost",
             "targethost": "AJBCOPY",
-            "dashlink": "/platform/ibmi?collectorHost=BCA-AJC-ND-01&targetHost=AJBCOPY"
+            "dashlink": "/platform/ibmi?collectorHost=localhost&targetHost=AJBCOPY"
         },
         {
             "id": "BCA-AJC-TC-01",
@@ -39,9 +39,9 @@
             "colour": "#ee0600",
             "scale": 4,
             "os": "LINUX",
-            "collectorhost": "BCA-AJC-ND-01",
+            "collectorhost": "localhost",
             "targethost": "BCA-AJC-TC-06",
-            "dashlink": "/platform/serverLinux?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-TC-06"
+            "dashlink": "/platform/serverLinux?collectorHost=localhost&targetHost=BCA-AJC-TC-06"
         },
         {
             "id": "BCA-AJC-TC-08",
