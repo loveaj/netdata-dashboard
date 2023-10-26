@@ -1,14 +1,20 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { XCircleIcon } from '@heroicons/react/24/outline'
 import MiniCardOS400 from './cards/MiniCardOS400';
 import MiniCardLINUX from './cards/MiniCardLINUX';
 import MiniCardWINDOWS from './cards/MiniCardWINDOWS';
 
+const osComponentMap = {
+  'OS400': MiniCardOS400,
+  'LINUX': MiniCardLINUX,
+  'WINDOWS': MiniCardWINDOWS
+};
+
 function SlidingPanel({ openPanel, setOpenPanel, closePanel, nodeId, nodeLabel, nodeOs, collectorHost, targetHost }) {
 
-  const DynamicComponent = (nodeOs === 'OS400') ? MiniCardOS400 : (nodeOs === 'LINUX') ? MiniCardLINUX: MiniCardWINDOWS;
-  
+  const DynamicComponent = osComponentMap[nodeOs];
+
   return (
     <Transition.Root show={openPanel} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closePanel}>
@@ -41,7 +47,7 @@ function SlidingPanel({ openPanel, setOpenPanel, closePanel, nodeId, nodeLabel, 
                               onClick={() => closePanel()}
                             >
                               <span className="sr-only">Close panel</span>
-                              <XMarkIcon className="w-6 h-6" aria-hidden="true" />
+                              <XCircleIcon className="w-6 h-6" aria-hidden="true" />
                             </button>
                           </div>
                         </div>
