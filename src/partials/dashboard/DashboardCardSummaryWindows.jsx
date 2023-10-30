@@ -92,7 +92,7 @@ function DashboardCardSummaryWindows({ collectorHost }) {
                   <img src={`${collectorUrl}${node.targethost}${badgeUrlCpu}windows_${node.targethost}.cpu_utilization_total`}></img>
                 </div>
                 <div className="flex justify-center flex-1 w-0">
-                  <img src={`${collectorUrl}${node.targethost}${badgeUrlRam}windows_${node.targethost}.memory_utilization`}></img>
+                  <img src={`${collectorUrl}${node.targethost}${badgeUrlRam}windows_${node.targethost}.os_visible_memory_usage`}></img>
                 </div>
                 <div className="flex justify-center flex-1 w-0 -ml-px">
                   <img src={`${collectorUrl}${node.targethost}${badgeUrlDisk}windows_${node.targethost}.logical_disk_C:_space_usage`}></img>
