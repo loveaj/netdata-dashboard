@@ -4,7 +4,7 @@ import SlidingPanel from '../SlidingPanel';
 
 function DashboardCardSummaryWindows({ collectorHost }) {
 
-  const collectorUrl = "http://" + collectorHost + ":19999/"
+  const collectorUrl = "http://" + collectorHost + ":19999/host/"
 
   const [openPanel, setOpenPanel] = useState(false);
   const [selectedNodeId, setSelectedNodeId] = useState(false);
@@ -15,7 +15,7 @@ function DashboardCardSummaryWindows({ collectorHost }) {
 
   const badgeLabelBgColour ="lightgrey"
   const badgeValueBgColours = "grey:null|78be20<80|e57200<90|d50032"
-  const badgeUrlBase = "api/v1/badge.svg?scale=125&options=percentage&precision=0&value_color=" + badgeValueBgColours + "&label_color=" + badgeLabelBgColour
+  const badgeUrlBase = "/api/v1/badge.svg?scale=125&options=percentage&precision=0&value_color=" + badgeValueBgColours + "&label_color=" + badgeLabelBgColour
   const badgeUrlCpu = badgeUrlBase + "&label=CPU&chart="
   const badgeUrlRam = badgeUrlBase + "&dimensions=used&label=RAM&chart="
   const badgeUrlDisk = badgeUrlBase + "&dimensions=used&label=Disk&chart="
@@ -89,13 +89,13 @@ function DashboardCardSummaryWindows({ collectorHost }) {
             <div>
               <div className="flex py-4 -mt-px divide-x divide-stone-300">
                 <div className="flex justify-center flex-1 w-0">
-                  <img src={`${collectorUrl}${badgeUrlCpu}windows_${node.targethost}.cpu_utilization_total`}></img>
+                  <img src={`${collectorUrl}${node.targethost}${badgeUrlCpu}windows_${node.targethost}.cpu_utilization_total`}></img>
                 </div>
                 <div className="flex justify-center flex-1 w-0">
-                  <img src={`${collectorUrl}${badgeUrlRam}windows_${node.targethost}.memory_utilization`}></img>
+                  <img src={`${collectorUrl}${node.targethost}${badgeUrlRam}windows_${node.targethost}.memory_utilization`}></img>
                 </div>
                 <div className="flex justify-center flex-1 w-0 -ml-px">
-                  <img src={`${collectorUrl}${badgeUrlDisk}windows_${node.targethost}.logical_disk_C:_space_usage`}></img>
+                  <img src={`${collectorUrl}${node.targethost}${badgeUrlDisk}windows_${node.targethost}.logical_disk_C:_space_usage`}></img>
                 </div>
               </div>
             </div>

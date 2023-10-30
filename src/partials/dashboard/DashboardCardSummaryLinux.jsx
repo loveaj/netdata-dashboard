@@ -15,10 +15,11 @@ function DashboardCardSummaryLinux({ collectorHost }) {
 
   const badgeLabelBgColour ="lightgrey"
   const badgeValueBgColours = "grey:null|78be20<80|e57200<90|d50032"
-  const badgeUrlCpu = "/api/v1/badge.svg?scale=125&chart=system.cpu&label=CPU&precision=0&value_color=" + badgeValueBgColours + "&label_color=" + badgeLabelBgColour
-  const badgeUrlRam = "/api/v1/badge.svg?scale=125&chart=system.ram&dimensions=used&options=percentage&label=RAM&precision=0&value_color=" + badgeValueBgColours + "&label_color=" + badgeLabelBgColour
-  const badgeUrlDisk = "/api/v1/badge.svg?scale=125&chart=disk_space._&dimensions=used&options=percentage&label=Disk&precision=0&value_color=" + badgeValueBgColours + "&label_color=" + badgeLabelBgColour
-  
+  const badgeUrlBase = "/api/v1/badge.svg?scale=125&options=percentage&precision=0&value_color=" + badgeValueBgColours + "&label_color=" + badgeLabelBgColour
+  const badgeUrlCpu = badgeUrlBase + "&label=CPU&chart=system.cpu"
+  const badgeUrlRam = badgeUrlBase + "&dimensions=used&label=RAM&chart=system.ram"
+  const badgeUrlDisk = badgeUrlBase + "&dimensions=used&label=Disk&chart=disk_space._"
+    
   const [nodeData, setNodeData] = useState([]);
   
   const getNodeData=()=>{
