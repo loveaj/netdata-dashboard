@@ -157,7 +157,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             <NavLink
                               reloadDocument
                               end
-                              to="/platform/serverlinux?collectorHost=localhost&targetHost=localhost"
+                              to="/platform/serverlinux?collectorHost=localhost"
                               className="block text-white truncate transition duration-150 hover:text-red-300"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
@@ -225,18 +225,6 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
                                 Summary
-                              </span>
-                            </NavLink>
-                          </li>
-                          <li className="mb-1 last:mb-0">
-                            <NavLink
-                              reloadDocument
-                              end
-                              to="/"
-                              className="block text-gray-300 truncate transition duration-150 hover:text-white"
-                            >
-                              <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
-                                APIs
                               </span>
                             </NavLink>
                           </li>
