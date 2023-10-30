@@ -72,7 +72,7 @@ function DashboardCardSummaryLinux({ collectorHost }) {
       <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {nodeData.map((node) => (
           
-          <li key={node.id} className="col-span-1 divide-y rounded-lg shadow-md divide-stone-300 bg-stone-50 shadow-gray-700">
+          <li key={node.id} className="col-span-1 divide-y rounded-lg shadow-lg divide-stone-300 bg-stone-50 shadow-slate-300">
             <div className="flex items-center justify-between w-full p-6 space-x-6">
               <div className="flex-1 truncate">
                 <div className="flex items-center space-x-3">

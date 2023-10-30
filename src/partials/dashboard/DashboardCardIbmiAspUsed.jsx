@@ -7,7 +7,7 @@ function DashboardCardIbmiAspUsed({ collectorHost, targetHost }) {
   const targetDataId = collectorHost + "_ibmi_remote_asp_utilisation"
 
   return (
-    <div className="flex-initial bg-white border rounded-sm shadow-lg h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-200">
+    <div className="flex-initial border rounded-sm shadow-lg bg-stone-50 h-110 col-span-full sm:col-span-10 xl:col-span-10 border-slate-300">
       <div className="px-5 pt-5">
         <header className="flex items-start justify-between mb-2">
         </header>
