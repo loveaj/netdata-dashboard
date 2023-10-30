@@ -34,7 +34,8 @@ function DashboardCardWindowsMemoryUtilisation({ collectorHost, targetHost }) {
               data-dygraph-valuerange="[0, null]"
               data-dygraph-strokewidth="1.5"
               data-dimensions="free,used"
-              data-desired-units="GB"
+              data-units="bits"
+              data-desired-units="gigabits"
               data-colors="#ef5675 #ffa600"        >
         </div>
       </div>
