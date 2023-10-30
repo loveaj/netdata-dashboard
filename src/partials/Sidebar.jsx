@@ -166,14 +166,14 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             </NavLink>
                           </li>
                           <li className="mb-1 last:mb-0">
-                            <NavLink
+                          <NavLink
                               reloadDocument
                               end
-                              to="/platform/example"
+                              to="/platform/serverwindows?collectorHost=localhost"
                               className="block text-white truncate transition duration-150 hover:text-red-300"
                             >
                               <span className="text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
-                                Windows servers
+                                MS Windows servers
                               </span>
                             </NavLink>
                           </li>

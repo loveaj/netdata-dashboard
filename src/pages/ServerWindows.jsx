@@ -3,15 +3,11 @@ import { useSearchParams } from "react-router-dom";
 
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
-import DashboardCardWindowsCpuUtilisation from '../partials/dashboard/DashboardCardWindowsCpuUtilisation';
-import DashboardCardWindowsDiskUsedPercent from '../partials/dashboard/DashboardCardWindowsDiskUsedPercent';
-import DashboardCardWindowsMemoryUtilisation from '../partials/dashboard/DashboardCardWindowsMemoryUtilisation';
-import DashboardCardWindowsPagingUsage from '../partials/dashboard/DashboardCardWindowsPagingUsage';
+import DashboardCardSummaryWindows from '../partials/dashboard/DashboardCardSummaryWindows';
 
 function ServerWindows() {
 
   const [searchParams, setSearchParams] = useSearchParams()
-  const targetHost = searchParams.get("targetHost")
   const collectorHost = searchParams.get("collectorHost")
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -29,30 +25,20 @@ function ServerWindows() {
 
         <main>
           <div className="w-full px-4 py-8 mx-auto sm:px-6 lg:px-8 max-w-9xl">
-
             <div className="mb-2 text-4xl font-light text-gray-900">
                 Infrastructure
             </div>
             <div className="text-2xl font-light text-gray-500">
                 MS Windows server summary
             </div>
-            <div className="mb-10 text-2xl font-light uppercase text-sky-500">
-                {targetHost}
-            </div>            
             {/* Cards */}
-            <div className="grid grid-cols-12 gap-6">
-              {/* Disk utilisation  */}
-              < DashboardCardWindowsDiskUsedPercent collectorHost={collectorHost} targetHost={targetHost} />
-              {/* CPU system.cpu */}
-              <DashboardCardWindowsCpuUtilisation collectorHost={collectorHost} targetHost={targetHost} />
-              {/* Memory visible */}
-              < DashboardCardWindowsMemoryUtilisation collectorHost={collectorHost} targetHost={targetHost} />
-              {/* Paging usage */}
-              < DashboardCardWindowsPagingUsage collectorHost={collectorHost} targetHost={targetHost} />
+            <div className="min-w-full min-h-full px-0 py-8 mx-auto">
+              {/* Summary of Windows server status  */}
+              <DashboardCardSummaryWindows collectorHost={collectorHost} />
             </div>
- 
           </div>
         </main>
+
       </div>
     </div>      
   );
