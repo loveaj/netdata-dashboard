@@ -96,7 +96,7 @@ function DashboardCardSummaryWindows({ collectorHost }) {
                   <img src={`${collectorUrl}${badgeUrlRam}windows_${node.targethost}.memory_utilization`}></img>
                 </div>
                 <div className="flex justify-center flex-1 w-0 -ml-px">
-                  <img src={`${collectorUrl}${badgeUrlDisk}windows_${node.targethost}.logical_disk_C__space_usage`}></img>
+                  <img src={`${collectorUrl}${badgeUrlDisk}windows_${node.targethost}.logical_disk_C:_space_usage`}></img>
                 </div>
               </div>
             </div>
