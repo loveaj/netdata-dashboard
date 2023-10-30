@@ -35,7 +35,7 @@ function DashboardCardWindowsPagingUsage({ collectorHost, targetHost }) {
               data-dygraph-strokewidth="1.5"
               data-dimensions="free,used"
               data-units="B"
-              data-desired-units="GB"
+              data-desired-units="GiB"
               data-colors="#ef5675 #ffa600"        >
         </div>
       </div>
