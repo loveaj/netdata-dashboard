@@ -28,9 +28,12 @@ function ServerLinux() {
             <div className="mb-2 text-4xl font-light text-gray-900">
                 Infrastructure
             </div>
-            <div className="text-2xl font-light text-gray-500">
+            <div className="text-2xl font-light text-gray-500 mb-2">
                 Linux server summary
             </div>
+            <div className="inline-flex w-12 py-1 px-2 mb-4 text-xs font-semibold text-white uppercase rounded-full bg-sky-500">
+              {PLATFORM.environment}
+            </div>          
             {/* Cards */}
             <div className="min-w-full min-h-full px-0 py-8 mx-auto">
               {/* Summary of Linux server status  */}

@@ -37,8 +37,8 @@ function DashboardCardTopology() {
   // Read in topology data
   useEffect(() => {
     fetch('/datasets/topology.json').then((res)=>res.json()).then((data)=>{
-      const nodes = data.nodes;
-      const links = data.links;
+      const {nodes} = data;
+      const {links} = data;
       setGraphData({ nodes, links });
     })
   }, [])

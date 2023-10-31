@@ -33,12 +33,12 @@ function ServerWindowsLarge() {
             <div className="mb-2 text-4xl font-light text-gray-900">
                 Infrastructure
             </div>
-            <div className="text-2xl font-light text-gray-500">
+            <div className="text-2xl font-light text-gray-500 mb-2">
                 MS Windows server summary
             </div>
-            <div className="mb-10 text-2xl font-light uppercase text-sky-500">
-                {targetHost}
-            </div>            
+            <div className="inline-flex w-12 py-1 px-2 mb-4 text-xs font-semibold text-white uppercase rounded-full bg-sky-500">
+              {PLATFORM.environment}
+            </div>          
             {/* Cards */}
             <div className="grid grid-cols-12 gap-6">
               {/* Disk utilisation  */}
