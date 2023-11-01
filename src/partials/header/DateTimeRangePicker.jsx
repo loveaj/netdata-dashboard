@@ -46,16 +46,6 @@ function DateTimeRangePicker() {
   
     return (
         <Space direction="vertical" size={12}>
-        <DatePicker
-          format="YYYY-MM-DD HH:mm:ss"
-          disabledDate={disabledDate}
-          disabledTime={disabledDateTime}
-          showTime={{
-            defaultValue: dayjs('00:00:00', 'HH:mm:ss'),
-          }}
-        />
-        <DatePicker picker="month" disabledDate={disabledDate} />
-        <RangePicker disabledDate={disabledDate} />
         <RangePicker
           disabledDate={disabledDate}
           disabledTime={disabledRangeTime}
