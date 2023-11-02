@@ -41,21 +41,42 @@ const disabledRangeTime = (_, type) => {
   };
 };
 
+const rangePresets = [
+    {
+      label: 'Last 7 Days',
+      value: [dayjs().add(-7, 'd'), dayjs()],
+    },
+    {
+      label: 'Last 14 Days',
+      value: [dayjs().add(-14, 'd'), dayjs()],
+    },
+    {
+      label: 'Last 30 Days',
+      value: [dayjs().add(-30, 'd'), dayjs()],
+    },
+    {
+      label: 'Last 90 Days',
+      value: [dayjs().add(-90, 'd'), dayjs()],
+    },
+  ];
 
 function DateTimeRangePicker() {
   
     return (
-        <Space direction="vertical" size={12}>
-        <RangePicker
-          disabledDate={disabledDate}
-          disabledTime={disabledRangeTime}
-          showTime={{
-            hideDisabledOptions: true,
-            defaultValue: [dayjs('00:00:00', 'HH:mm:ss'), dayjs('11:59:59', 'HH:mm:ss')],
-          }}
-          format="YYYY-MM-DD HH:mm:ss"
-        />
-      </Space>
+        <div class="p-4 bg-red-900">
+            <Space direction="vertical" size={12}>
+                <RangePicker
+                    disabledDate={disabledDate}
+                    disabledTime={disabledRangeTime}
+                    showTime={{
+                        hideDisabledOptions: true,
+                        defaultValue: [dayjs('00:00:00', 'HH:mm:ss'), dayjs('11:59:59', 'HH:mm:ss')],
+                    }}
+                    format="YYYY-MM-DD HH:mm:ss"
+                    presets={rangePresets} 
+                />
+            </Space>
+        </div>
     );
   }
   
