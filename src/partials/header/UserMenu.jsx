@@ -32,7 +32,7 @@ function UserMenu() {
   });
 
   return (
-    <div className="relative inline-flex pl-4 pr-4 bg-gray-900">
+    <div className="relative inline-flex px-4 bg-gray-900">
       <button
         ref={trigger}
         className="inline-flex items-center justify-center group"
