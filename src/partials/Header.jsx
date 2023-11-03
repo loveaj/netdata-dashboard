@@ -7,10 +7,9 @@ import HamburgerMenuIcon from '../images/bars-dark.svg';
 
 function Header({ sidebarOpen, setSidebarOpen }) {
 
-  const [searchModalOpen, setSearchModalOpen] = useState(false)
   const timeWindowTodayEnd = new Date();
   const timeWindowTodayStart = new Date(timeWindowTodayEnd.getFullYear(), timeWindowTodayEnd.getMonth(), timeWindowTodayEnd.getDate());
-  const [dateTimes, setDateTimes] = useState([timeWindowTodayStart, timeWindowTodayEnd]);
+  const [defaultDateTimes, setDateTimes] = useState([timeWindowTodayStart, timeWindowTodayEnd]);
   
   return (
     <header className="sticky top-0 z-30 bg-gray-900 border-b border-slate-200">
@@ -22,7 +21,7 @@ function Header({ sidebarOpen, setSidebarOpen }) {
 
             {/* Hamburger button */}
             <button
-              className="text-slate-500 hover:text-slate-600 lg:hidden"
+              className="text-slate-500 hover:text-slate-600 bg-transparent lg:hidden"
               aria-controls="sidebar"
               aria-expanded={sidebarOpen}
               onClick={(e) => { e.stopPropagation(); setSidebarOpen(!sidebarOpen); }}
@@ -40,7 +39,9 @@ function Header({ sidebarOpen, setSidebarOpen }) {
 
           {/* Header: Right side */}
           <div className="flex items-center">
-            <DateTimeRangePicker />
+            <DateTimeRangePicker 
+              useDateTimes={ defaultDateTimes }
+            />
             <Help />
             <UserMenu />
           </div>

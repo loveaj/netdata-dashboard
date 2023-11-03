@@ -35,7 +35,7 @@ function UserMenu() {
     <div className="relative inline-flex px-4 bg-gray-900">
       <button
         ref={trigger}
-        className="inline-flex items-center justify-center group"
+        className="inline-flex items-center justify-center bg-transparent group"
         aria-haspopup="true"
         onClick={() => setDropdownOpen(!dropdownOpen)}
         aria-expanded={dropdownOpen}

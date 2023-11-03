@@ -33,7 +33,7 @@ function Help() {
   });
 
   return (
-    <div className="relative inline-flex px-4 bg-red-900">
+    <div className="relative inline-flex p-4 bg-red-900">
       <button
         ref={trigger}
         className={`w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 transition duration-150 rounded-full ${dropdownOpen && 'bg-slate-200'}`}
