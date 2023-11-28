@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DateTimeWindowContext from '../../components/DateTimeWindow';
 
 function DashboardCardIbmiAspUsedPercent({ collectorHost, targetHost }) {
 
   const collectorUrl = "http://" + collectorHost + ":19999/"
   const targetData = "ibmi_remote.asp_used_percent"
   const targetDataId = collectorHost + "_ibmi_remote_asp_used_percent"
+  const selectedDateTimes = useContext(DateTimeWindowContext);
 
   return (
     <div className="flex-initial border rounded-sm shadow-lg bg-stone-50 h-110 col-span-full sm:col-span-5 xl:col-span-4 border-slate-300">
@@ -21,11 +23,14 @@ function DashboardCardIbmiAspUsedPercent({ collectorHost, targetHost }) {
               data-host={collectorUrl}
               // data-id={targetDataId}
               data-chart-library="easypiechart" 
-              data-title="Used ASP" 
+              data-title="Used ASP"
               data-units="%"
-              data-decimal-digits="0" 
+              data-decimal-digits="0"
               data-width="250px"
               data-height="250px"
+              data-after="-300"
+              // data-after={new Date(selectedDateTimes[0]).getTime() / 1000}
+              // data-before={new Date(selectedDateTimes[1]).getTime() / 1000}
               data-easypiechart-barcolor="(function(percent){return(percent < 80 ? '#78be20' : percent < 90 ? '#e57200' : '#d50032');})"
               data-easypiechart-min-value="0"
               data-easypiechart-max-value="100"

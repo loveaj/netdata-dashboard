@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Help from './header/Help';
 import UserMenu from './header/UserMenu';
 import DateTimeRangePicker from './header/DateTimeRangePicker';
 import HamburgerMenuIcon from '../images/bars-dark.svg';
 
+function Header({ sidebarOpen, setSidebarOpen, handleDateTimes }) {
 
-function Header({ sidebarOpen, setSidebarOpen }) {
-
-  const timeWindowTodayEnd = new Date();
-  const timeWindowTodayStart = new Date(timeWindowTodayEnd.getFullYear(), timeWindowTodayEnd.getMonth(), timeWindowTodayEnd.getDate());
-  const [defaultDateTimes, setDateTimes] = useState([timeWindowTodayStart, timeWindowTodayEnd]);
-  
   return (
     <header className="sticky top-0 z-30 bg-gray-900 border-b border-slate-200">
       <div>
@@ -21,7 +16,7 @@ function Header({ sidebarOpen, setSidebarOpen }) {
 
             {/* Hamburger button */}
             <button
-              className="text-slate-500 hover:text-slate-600 bg-transparent lg:hidden"
+              className="bg-transparent text-slate-500 hover:text-slate-600 lg:hidden"
               aria-controls="sidebar"
               aria-expanded={sidebarOpen}
               onClick={(e) => { e.stopPropagation(); setSidebarOpen(!sidebarOpen); }}
@@ -40,7 +35,7 @@ function Header({ sidebarOpen, setSidebarOpen }) {
           {/* Header: Right side */}
           <div className="flex items-center">
             <DateTimeRangePicker 
-              useDateTimes={ defaultDateTimes }
+              handleDateTimes={ handleDateTimes }
             />
             <Help />
             <UserMenu />

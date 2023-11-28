@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { DatePicker, Space } from 'antd';
@@ -13,37 +13,12 @@ const disabledDate = (current) => {
   return current > dayjs().endOf('day');
 };
 
-const rangePresets = [
-  {
-    label: 'Last 15 minutes',
-    value: [dayjs().add(-15, 'm'), dayjs()],
-  },
-  {
-    label: 'Last 1 hour',
-    value: [dayjs().add(-1, 'h'), dayjs()],
-  },
-  {
-    label: 'Today',
-    value: [dayjs().startOf('day'), dayjs()],
-  },
-  {
-    label: 'Last 1 Days',
-    value: [dayjs().add(-1, 'd'), dayjs()],
-  },
-  {
-    label: 'Last 7 Days',
-    value: [dayjs().add(-7, 'd'), dayjs()],
-  },
-];
+function DateTimeRangePicker( {handleDateTimes} ) {
 
-
-function DateTimeRangePicker(useDateTimes) {
-
-  console.log('Passed in useDateTimes: ', useDateTimes)
-
-  const handleDateTimeRangeChange = (value, dateString) => {
-    console.log('Selected Time: ', value)
-    console.log('Formatted Selected Time: ', dateString)
+  
+  const handleDateTimeRangeChange = (value) => {
+    console.log('DateTimeRangePicker -> selectedDateTimes: ', value)
+    handleDateTimes(value)
   };
 
   return (
@@ -56,7 +31,38 @@ function DateTimeRangePicker(useDateTimes) {
             //defaultValue: [dayjs('00:00:00', 'HH:mm:ss'), dayjs('11:59:59', 'HH:mm:ss')],
           }}
           format="YYYY-MM-DD HH:mm:ss"
-          presets={rangePresets}
+          presets={
+            [
+              {
+                label: '5 minutes',
+                value: [dayjs().add(-5, 'm'), dayjs()],
+              },  
+              {
+                label: 'Last 15 minutes',
+                value: [dayjs().add(-15, 'm'), dayjs()],
+              },
+              {
+                label: 'Last 30 minutes',
+                value: [dayjs().add(-30, 'm'), dayjs()],
+              },  
+              {
+                label: 'Last 1 hour',
+                value: [dayjs().add(-1, 'h'), dayjs()],
+              },
+              {
+                label: 'Today',
+                value: [dayjs().startOf('day'), dayjs()],
+              },
+              {
+                label: 'Last 1 Days',
+                value: [dayjs().add(-1, 'd'), dayjs()],
+              },
+              {
+                label: 'Last 7 Days',
+                value: [dayjs().add(-7, 'd'), dayjs()],
+              },
+            ]
+          }
           onChange={handleDateTimeRangeChange}
           size='small'
         />
