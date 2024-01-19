@@ -187,17 +187,6 @@
             "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-IR-02"
         },
         {
-            "id": "BCA-AJC-IR-03",
-            "label": "IRESS DealServer",
-            "group": 3,
-            "colour": "#178add",
-            "scale": 4,
-            "os": "WINDOWS",
-            "collectorhost": "localhost",
-            "targethost": "BCA-AJC-IR-03",
-            "dashlink": "/platform/serverwindows?collectorHost=BCA-AJC-ND-01&targetHost=BCA-AJC-IR-03"
-        },
-        {
             "id": "BCA-AJC-FT-01",
             "label": "FTP Server",
             "group": 3,
